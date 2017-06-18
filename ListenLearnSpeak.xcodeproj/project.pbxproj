@@ -7,13 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0D9E501EF5DB94003BF47A /* LessonFinishedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9E4F1EF5DB94003BF47A /* LessonFinishedVC.swift */; };
+		7F1E98691EE728F9003BEDA8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E98681EE728F9003BEDA8 /* RegisterVC.swift */; };
+		7F1E986B1EE75F52003BEDA8 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E986A1EE75F52003BEDA8 /* MapVC.swift */; };
+		7F1E986D1EE75F66003BEDA8 /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E986C1EE75F66003BEDA8 /* LessonsVC.swift */; };
+		7F1E986F1EE75F72003BEDA8 /* ExamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E986E1EE75F72003BEDA8 /* ExamsVC.swift */; };
+		7F1E98711EE75F7D003BEDA8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E98701EE75F7D003BEDA8 /* ProfileVC.swift */; };
+		7F1E98741EE77102003BEDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1E98721EE77102003BEDA8 /* Main.storyboard */; };
+		7F2C04B71EEED02900F4E5B7 /* LessonSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04B61EEED02900F4E5B7 /* LessonSelectCell.swift */; };
+		7F2C04B91EEEEE8E00F4E5B7 /* lectii.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C04B81EEEEE8E00F4E5B7 /* lectii.csv */; };
+		7F2C04BB1EEEEEAF00F4E5B7 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04BA1EEEEEAF00F4E5B7 /* csv.swift */; };
+		7F2C04BD1EEEF25000F4E5B7 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */; };
+		7F2C04C11EEEF80E00F4E5B7 /* LearnSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C04C01EEEF80E00F4E5B7 /* LearnSlider.xib */; };
+		7F2C04C31EEEF82700F4E5B7 /* LearnSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */; };
+		7F80043F1EF17C9F0051D909 /* MapSlide2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F80043E1EF17C9F0051D909 /* MapSlide2.xib */; };
+		7F8004431EF17CBF0051D909 /* MapSlide2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8004421EF17CBF0051D909 /* MapSlide2.swift */; };
+		7F8004481EF405470051D909 /* StepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8004471EF405470051D909 /* StepProgressBar.framework */; };
 		7FA5B9011EE5B8B600BC1E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */; };
-		7FA5B9031EE5B8B600BC1E33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9021EE5B8B600BC1E33 /* ViewController.swift */; };
-		7FA5B9061EE5B8B600BC1E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5B9041EE5B8B600BC1E33 /* Main.storyboard */; };
+		7FA5B9031EE5B8B600BC1E33 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9021EE5B8B600BC1E33 /* LoginVC.swift */; };
 		7FA5B9081EE5B8B600BC1E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5B9071EE5B8B600BC1E33 /* Assets.xcassets */; };
 		7FA5B90B1EE5B8B600BC1E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5B9091EE5B8B600BC1E33 /* LaunchScreen.storyboard */; };
 		7FA5B9161EE5B8B600BC1E33 /* ListenLearnSpeakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9151EE5B8B600BC1E33 /* ListenLearnSpeakTests.swift */; };
 		7FA5B9211EE5B8B600BC1E33 /* ListenLearnSpeakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9201EE5B8B600BC1E33 /* ListenLearnSpeakUITests.swift */; };
+		7FA5B9341EE5D74E00BC1E33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5B9331EE5D74E00BC1E33 /* GoogleService-Info.plist */; };
+		7FA5B9371EE5FAB900BC1E33 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA5B9351EE5FAB900BC1E33 /* FacebookCore.framework */; };
+		7FA5B9381EE5FAB900BC1E33 /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA5B9361EE5FAB900BC1E33 /* FacebookLogin.framework */; };
+		7FAA5B851EE8A9F00085D453 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA5B841EE8A9F00085D453 /* TabBarController.swift */; };
+		7FAA5B881EE8BA6F0085D453 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA5B871EE8BA6F0085D453 /* WelcomeVC.swift */; };
+		7FAA5B8C1EE8C6E50085D453 /* ButtonWithRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA5B8B1EE8C6E50085D453 /* ButtonWithRadius.swift */; };
+		7FAA5B8E1EE8D2950085D453 /* MapSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAA5B8D1EE8D2950085D453 /* MapSlide.xib */; };
+		7FAA5B901EE8D2C40085D453 /* MapSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA5B8F1EE8D2C30085D453 /* MapSlide.swift */; };
+		7FB50D1C1EEDDCFA00E33E7D /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB50D1B1EEDDCFA00E33E7D /* Lesson.swift */; };
+		7FB838211EF0340C00461F52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB838201EF0340C00461F52 /* Constants.swift */; };
+		7FB838231EF0853500461F52 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB838221EF0853500461F52 /* Alamofire.framework */; };
+		7FCD1FA11EEF57A9004530E3 /* TextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */; };
+		7FEAE4ED1EF6917500B98F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAE4EC1EF6917500B98F56 /* User.swift */; };
+		7FEAE4EF1EF6C9E400B98F56 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAE4EE1EF6C9E400B98F56 /* Objective.swift */; };
+		EBE51EBD7E722E467CA3530E /* Pods_ListenLearnSpeak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA1B3FE6505815DD50656F2 /* Pods_ListenLearnSpeak.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +64,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DA0D9F0854AE1C1B2A91896 /* Pods-ListenLearnSpeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenLearnSpeak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak.debug.xcconfig"; sourceTree = "<group>"; };
+		4EA1B3FE6505815DD50656F2 /* Pods_ListenLearnSpeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListenLearnSpeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0D9E4F1EF5DB94003BF47A /* LessonFinishedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonFinishedVC.swift; sourceTree = "<group>"; };
+		7F1E98681EE728F9003BEDA8 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		7F1E986A1EE75F52003BEDA8 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		7F1E986C1EE75F66003BEDA8 /* LessonsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
+		7F1E986E1EE75F72003BEDA8 /* ExamsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsVC.swift; sourceTree = "<group>"; };
+		7F1E98701EE75F7D003BEDA8 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		7F1E98731EE77102003BEDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F2C04B61EEED02900F4E5B7 /* LessonSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonSelectCell.swift; sourceTree = "<group>"; };
+		7F2C04B81EEEEE8E00F4E5B7 /* lectii.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lectii.csv; sourceTree = "<group>"; };
+		7F2C04BA1EEEEEAF00F4E5B7 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
+		7F2C04C01EEEF80E00F4E5B7 /* LearnSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnSlider.xib; sourceTree = "<group>"; };
+		7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnSlider.swift; sourceTree = "<group>"; };
+		7F80043E1EF17C9F0051D909 /* MapSlide2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSlide2.xib; sourceTree = "<group>"; };
+		7F8004421EF17CBF0051D909 /* MapSlide2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSlide2.swift; sourceTree = "<group>"; };
+		7F8004451EF401460051D909 /* DottedProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DottedProgressBar.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/DottedProgressBar/DottedProgressBar.framework"; sourceTree = "<group>"; };
+		7F8004471EF405470051D909 /* StepProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StepProgressBar.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/StepProgressBar/StepProgressBar.framework"; sourceTree = "<group>"; };
 		7FA5B8FD1EE5B8B600BC1E33 /* ListenLearnSpeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListenLearnSpeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FA5B9021EE5B8B600BC1E33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FA5B9051EE5B8B600BC1E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FA5B9021EE5B8B600BC1E33 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7FA5B9071EE5B8B600BC1E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FA5B90A1EE5B8B600BC1E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FA5B90C1EE5B8B600BC1E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +95,24 @@
 		7FA5B91C1EE5B8B600BC1E33 /* ListenLearnSpeakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListenLearnSpeakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA5B9201EE5B8B600BC1E33 /* ListenLearnSpeakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenLearnSpeakUITests.swift; sourceTree = "<group>"; };
 		7FA5B9221EE5B8B600BC1E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA5B9331EE5D74E00BC1E33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7FA5B9351EE5FAB900BC1E33 /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/FacebookCore/FacebookCore.framework"; sourceTree = "<group>"; };
+		7FA5B9361EE5FAB900BC1E33 /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/FacebookLogin/FacebookLogin.framework"; sourceTree = "<group>"; };
+		7FA5B9391EE5FBDC00BC1E33 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		7FA5B93A1EE5FBDC00BC1E33 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		7FA5B93D1EE5FD7200BC1E33 /* ListenLearnSpeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListenLearnSpeak.entitlements; sourceTree = "<group>"; };
+		7FAA5B841EE8A9F00085D453 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7FAA5B871EE8BA6F0085D453 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		7FAA5B8B1EE8C6E50085D453 /* ButtonWithRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithRadius.swift; sourceTree = "<group>"; };
+		7FAA5B8D1EE8D2950085D453 /* MapSlide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSlide.xib; sourceTree = "<group>"; };
+		7FAA5B8F1EE8D2C30085D453 /* MapSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSlide.swift; sourceTree = "<group>"; };
+		7FB50D1B1EEDDCFA00E33E7D /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		7FB838201EF0340C00461F52 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7FB838221EF0853500461F52 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewStyle.swift; sourceTree = "<group>"; };
+		7FEAE4EC1EF6917500B98F56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FEAE4EE1EF6C9E400B98F56 /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
+		9DABBA88948EA3A93EDB5340 /* Pods-ListenLearnSpeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenLearnSpeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +120,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8004481EF405470051D909 /* StepProgressBar.framework in Frameworks */,
+				7FB838231EF0853500461F52 /* Alamofire.framework in Frameworks */,
+				7FA5B9371EE5FAB900BC1E33 /* FacebookCore.framework in Frameworks */,
+				7FA5B9381EE5FAB900BC1E33 /* FacebookLogin.framework in Frameworks */,
+				EBE51EBD7E722E467CA3530E /* Pods_ListenLearnSpeak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +145,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A3A30677264F914CF4FFA46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0D9F0854AE1C1B2A91896 /* Pods-ListenLearnSpeak.debug.xcconfig */,
+				9DABBA88948EA3A93EDB5340 /* Pods-ListenLearnSpeak.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F8004441EF1804A0051D909 /* MapSliders */ = {
+			isa = PBXGroup;
+			children = (
+				7FAA5B8D1EE8D2950085D453 /* MapSlide.xib */,
+				7FAA5B8F1EE8D2C30085D453 /* MapSlide.swift */,
+				7F80043E1EF17C9F0051D909 /* MapSlide2.xib */,
+				7F8004421EF17CBF0051D909 /* MapSlide2.swift */,
+			);
+			name = MapSliders;
+			sourceTree = "<group>";
+		};
 		7FA5B8F41EE5B8B600BC1E33 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +172,8 @@
 				7FA5B9141EE5B8B600BC1E33 /* ListenLearnSpeakTests */,
 				7FA5B91F1EE5B8B600BC1E33 /* ListenLearnSpeakUITests */,
 				7FA5B8FE1EE5B8B600BC1E33 /* Products */,
+				6A3A30677264F914CF4FFA46 /* Pods */,
+				D9189F324AF0456AA3F402E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +190,14 @@
 		7FA5B8FF1EE5B8B600BC1E33 /* ListenLearnSpeak */ = {
 			isa = PBXGroup;
 			children = (
-				7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */,
-				7FA5B9021EE5B8B600BC1E33 /* ViewController.swift */,
-				7FA5B9041EE5B8B600BC1E33 /* Main.storyboard */,
-				7FA5B9071EE5B8B600BC1E33 /* Assets.xcassets */,
-				7FA5B9091EE5B8B600BC1E33 /* LaunchScreen.storyboard */,
-				7FA5B90C1EE5B8B600BC1E33 /* Info.plist */,
+				7F2C04BA1EEEEEAF00F4E5B7 /* csv.swift */,
+				7F2C04B81EEEEE8E00F4E5B7 /* lectii.csv */,
+				7FA5B93D1EE5FD7200BC1E33 /* ListenLearnSpeak.entitlements */,
+				7FA5B9301EE5BF1800BC1E33 /* Model */,
+				7FA5B92F1EE5BF1400BC1E33 /* View */,
+				7FA5B92E1EE5BF0800BC1E33 /* Controller */,
+				7FA5B9321EE5C2F000BC1E33 /* Resources */,
+				7FA5B9311EE5C2EA00BC1E33 /* Utils */,
 			);
 			path = ListenLearnSpeak;
 			sourceTree = "<group>";
@@ -125,6 +220,82 @@
 			path = ListenLearnSpeakUITests;
 			sourceTree = "<group>";
 		};
+		7FA5B92E1EE5BF0800BC1E33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5B9021EE5B8B600BC1E33 /* LoginVC.swift */,
+				7F1E98681EE728F9003BEDA8 /* RegisterVC.swift */,
+				7F1E986A1EE75F52003BEDA8 /* MapVC.swift */,
+				7F1E986C1EE75F66003BEDA8 /* LessonsVC.swift */,
+				7F1E986E1EE75F72003BEDA8 /* ExamsVC.swift */,
+				7F1E98701EE75F7D003BEDA8 /* ProfileVC.swift */,
+				7FAA5B841EE8A9F00085D453 /* TabBarController.swift */,
+				7FAA5B871EE8BA6F0085D453 /* WelcomeVC.swift */,
+				7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */,
+				7F0D9E4F1EF5DB94003BF47A /* LessonFinishedVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7FA5B92F1EE5BF1400BC1E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F8004441EF1804A0051D909 /* MapSliders */,
+				7FAA5B8B1EE8C6E50085D453 /* ButtonWithRadius.swift */,
+				7F2C04B61EEED02900F4E5B7 /* LessonSelectCell.swift */,
+				7F2C04C01EEEF80E00F4E5B7 /* LearnSlider.xib */,
+				7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */,
+				7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7FA5B9301EE5BF1800BC1E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FB50D1B1EEDDCFA00E33E7D /* Lesson.swift */,
+				7FEAE4EC1EF6917500B98F56 /* User.swift */,
+				7FEAE4EE1EF6C9E400B98F56 /* Objective.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7FA5B9311EE5C2EA00BC1E33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */,
+				7F1E98721EE77102003BEDA8 /* Main.storyboard */,
+				7FA5B9091EE5B8B600BC1E33 /* LaunchScreen.storyboard */,
+				7FA5B90C1EE5B8B600BC1E33 /* Info.plist */,
+				7FA5B9331EE5D74E00BC1E33 /* GoogleService-Info.plist */,
+				7FB838201EF0340C00461F52 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7FA5B9321EE5C2F000BC1E33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FA5B9071EE5B8B600BC1E33 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D9189F324AF0456AA3F402E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F8004471EF405470051D909 /* StepProgressBar.framework */,
+				7F8004451EF401460051D909 /* DottedProgressBar.framework */,
+				7FB838221EF0853500461F52 /* Alamofire.framework */,
+				7FA5B9391EE5FBDC00BC1E33 /* FBSDKCoreKit.framework */,
+				7FA5B93A1EE5FBDC00BC1E33 /* FBSDKLoginKit.framework */,
+				7FA5B9351EE5FAB900BC1E33 /* FacebookCore.framework */,
+				7FA5B9361EE5FAB900BC1E33 /* FacebookLogin.framework */,
+				4EA1B3FE6505815DD50656F2 /* Pods_ListenLearnSpeak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +303,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FA5B9251EE5B8B600BC1E33 /* Build configuration list for PBXNativeTarget "ListenLearnSpeak" */;
 			buildPhases = (
+				EA23CBDF2AB918ED6D7CFA26 /* [CP] Check Pods Manifest.lock */,
 				7FA5B8F91EE5B8B600BC1E33 /* Sources */,
 				7FA5B8FA1EE5B8B600BC1E33 /* Frameworks */,
 				7FA5B8FB1EE5B8B600BC1E33 /* Resources */,
+				5BB373D04B0DA46947092AD3 /* [CP] Embed Pods Frameworks */,
+				7B153AF98398B22E88B31C04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +369,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HWR8QRZ7PF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					7FA5B9101EE5B8B600BC1E33 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -235,9 +414,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2C04B91EEEEE8E00F4E5B7 /* lectii.csv in Resources */,
+				7FAA5B8E1EE8D2950085D453 /* MapSlide.xib in Resources */,
 				7FA5B90B1EE5B8B600BC1E33 /* LaunchScreen.storyboard in Resources */,
+				7F80043F1EF17C9F0051D909 /* MapSlide2.xib in Resources */,
+				7FA5B9341EE5D74E00BC1E33 /* GoogleService-Info.plist in Resources */,
+				7F2C04C11EEEF80E00F4E5B7 /* LearnSlider.xib in Resources */,
 				7FA5B9081EE5B8B600BC1E33 /* Assets.xcassets in Resources */,
-				7FA5B9061EE5B8B600BC1E33 /* Main.storyboard in Resources */,
+				7F1E98741EE77102003BEDA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +441,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5BB373D04B0DA46947092AD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B153AF98398B22E88B31C04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA23CBDF2AB918ED6D7CFA26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FA5B8F91EE5B8B600BC1E33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA5B9031EE5B8B600BC1E33 /* ViewController.swift in Sources */,
+				7FB50D1C1EEDDCFA00E33E7D /* Lesson.swift in Sources */,
+				7FEAE4EF1EF6C9E400B98F56 /* Objective.swift in Sources */,
+				7F2C04C31EEEF82700F4E5B7 /* LearnSlider.swift in Sources */,
+				7FAA5B901EE8D2C40085D453 /* MapSlide.swift in Sources */,
+				7F2C04BD1EEEF25000F4E5B7 /* LearnVC.swift in Sources */,
+				7F1E98691EE728F9003BEDA8 /* RegisterVC.swift in Sources */,
+				7FAA5B851EE8A9F00085D453 /* TabBarController.swift in Sources */,
+				7F8004431EF17CBF0051D909 /* MapSlide2.swift in Sources */,
+				7F2C04B71EEED02900F4E5B7 /* LessonSelectCell.swift in Sources */,
+				7F1E986F1EE75F72003BEDA8 /* ExamsVC.swift in Sources */,
+				7FCD1FA11EEF57A9004530E3 /* TextViewStyle.swift in Sources */,
+				7FAA5B8C1EE8C6E50085D453 /* ButtonWithRadius.swift in Sources */,
+				7F1E98711EE75F7D003BEDA8 /* ProfileVC.swift in Sources */,
+				7F2C04BB1EEEEEAF00F4E5B7 /* csv.swift in Sources */,
+				7F1E986B1EE75F52003BEDA8 /* MapVC.swift in Sources */,
+				7F1E986D1EE75F66003BEDA8 /* LessonsVC.swift in Sources */,
+				7FAA5B881EE8BA6F0085D453 /* WelcomeVC.swift in Sources */,
+				7F0D9E501EF5DB94003BF47A /* LessonFinishedVC.swift in Sources */,
+				7FA5B9031EE5B8B600BC1E33 /* LoginVC.swift in Sources */,
 				7FA5B9011EE5B8B600BC1E33 /* AppDelegate.swift in Sources */,
+				7FB838211EF0340C00461F52 /* Constants.swift in Sources */,
+				7FEAE4ED1EF6917500B98F56 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,10 +551,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7FA5B9041EE5B8B600BC1E33 /* Main.storyboard */ = {
+		7F1E98721EE77102003BEDA8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7FA5B9051EE5B8B600BC1E33 /* Base */,
+				7F1E98731EE77102003BEDA8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -415,27 +667,34 @@
 		};
 		7FA5B9261EE5B8B600BC1E33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA0D9F0854AE1C1B2A91896 /* Pods-ListenLearnSpeak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ListenLearnSpeak/ListenLearnSpeak.entitlements;
 				DEVELOPMENT_TEAM = HWR8QRZ7PF;
 				INFOPLIST_FILE = ListenLearnSpeak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = disable;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionutdemeterca.ListenLearnSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7FA5B9271EE5B8B600BC1E33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DABBA88948EA3A93EDB5340 /* Pods-ListenLearnSpeak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ListenLearnSpeak/ListenLearnSpeak.entitlements;
 				DEVELOPMENT_TEAM = HWR8QRZ7PF;
 				INFOPLIST_FILE = ListenLearnSpeak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionutdemeterca.ListenLearnSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -516,6 +775,7 @@
 				7FA5B9271EE5B8B600BC1E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FA5B9281EE5B8B600BC1E33 /* Build configuration list for PBXNativeTarget "ListenLearnSpeakTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +784,7 @@
 				7FA5B92A1EE5B8B600BC1E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FA5B92B1EE5B8B600BC1E33 /* Build configuration list for PBXNativeTarget "ListenLearnSpeakUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +793,7 @@
 				7FA5B92D1EE5B8B600BC1E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
