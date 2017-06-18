@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ListenLearnSpeak">
+   </FileRef>
+   <FileRef
       location = "group:ListenLearnSpeak.xcodeproj">
    </FileRef>
    <FileRef
