@@ -16,6 +16,7 @@ class Objective {
     private var _objNr: String!
     private var _objName: String!
     private var _objPoints: Int!
+    private var _objAchieved: Int!
     
     var objNr: String {
         if _objNr == nil {
@@ -37,7 +38,6 @@ class Objective {
         }
         return _objPoints
     }
-    
     
     init(objNr: String) {
         self._objNr = objNr

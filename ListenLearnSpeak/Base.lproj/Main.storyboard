@@ -153,12 +153,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="13"/>
+            <point key="canvasLocation" x="118" y="79"/>
         </scene>
-        <!--LessonsVC-->
+        <!--TopicsVC-->
         <scene sceneID="Kvd-bw-PcJ">
             <objects>
-                <viewController id="niD-ri-KAx" userLabel="LessonsVC" customClass="LessonsVC" customModule="ListenLearnSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopicsVC" title="TopicsVC" id="niD-ri-KAx" customClass="TopicsVC" customModule="ListenLearnSpeak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QgL-Oi-UB5"/>
                         <viewControllerLayoutGuide type="bottom" id="RlJ-95-fsp"/>
@@ -197,14 +197,14 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LessonSelectCell" id="8X3-2x-1ek" customClass="LessonSelectCell" customModule="ListenLearnSpeak" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicSelectCell" id="8X3-2x-1ek" customClass="TopicSelectCell" customModule="ListenLearnSpeak" customModuleProvider="target">
                                         <rect key="frame" x="10" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titlu lectie" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTF-YY-fsq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titlu subiect" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTF-YY-fsq">
                                                     <rect key="frame" x="10" y="5" width="130" height="140"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,7 +330,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="982-dr-lHF">
-                                <rect key="frame" x="16" y="135" width="343" height="451"/>
+                                <rect key="frame" x="16" y="135" width="343" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asculta pronuntia si retine traducerea cuvintelor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9K-hu-KGx">
@@ -355,9 +355,20 @@
                                     <action selector="welcomeBtnPressed:" destination="ZrT-g3-9St" eventType="touchUpInside" id="hy9-31-WEJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd1-Pe-ncW" customClass="ButtonWithRadius" customModule="ListenLearnSpeak" customModuleProvider="target">
+                                <rect key="frame" x="16" y="564" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.30529639120000002" green="0.60157227520000001" blue="0.95585268739999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="↑ Informatii suplimentare">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tipInfoBtnPressed:" destination="PgU-Dm-D2B" eventType="touchUpInside" id="H7j-99-URR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Srw-Ld-j6k" firstAttribute="top" secondItem="Pd1-Pe-ncW" secondAttribute="bottom" constant="8" id="0K5-jP-tIT"/>
                             <constraint firstItem="LIR-OZ-Vfm" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leadingMargin" constant="4" id="2VU-yR-Ym3"/>
                             <constraint firstItem="h9K-hu-KGx" firstAttribute="top" secondItem="LIR-OZ-Vfm" secondAttribute="bottom" constant="15" id="4sq-OY-GC6"/>
                             <constraint firstItem="Srw-Ld-j6k" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leadingMargin" id="8qy-vz-W3p"/>
@@ -365,19 +376,21 @@
                             <constraint firstItem="982-dr-lHF" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leadingMargin" id="CX3-yC-JnB"/>
                             <constraint firstItem="S84-IO-A8i" firstAttribute="top" secondItem="Ifv-GB-egc" secondAttribute="bottom" constant="20" id="LYL-nF-350"/>
                             <constraint firstItem="gCY-X0-zIR" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leading" id="OEO-7c-Cg8"/>
+                            <constraint firstItem="Pd1-Pe-ncW" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leadingMargin" id="Qko-qn-E9Q"/>
+                            <constraint firstItem="Pd1-Pe-ncW" firstAttribute="trailing" secondItem="oWV-hp-Gmy" secondAttribute="trailingMargin" id="RRd-Q5-D8V"/>
                             <constraint firstItem="Cbd-pD-fKc" firstAttribute="trailing" secondItem="oWV-hp-Gmy" secondAttribute="trailingMargin" id="SsG-qZ-6Jo"/>
                             <constraint firstItem="Cbd-pD-fKc" firstAttribute="top" secondItem="oWV-hp-Gmy" secondAttribute="topMargin" constant="26" id="TVr-Qo-Itj"/>
                             <constraint firstItem="982-dr-lHF" firstAttribute="top" secondItem="h9K-hu-KGx" secondAttribute="bottom" constant="30" id="UMs-HU-3tv"/>
+                            <constraint firstItem="Pd1-Pe-ncW" firstAttribute="top" secondItem="982-dr-lHF" secondAttribute="bottom" constant="15" id="VCd-ld-VqH"/>
                             <constraint firstItem="982-dr-lHF" firstAttribute="centerX" secondItem="oWV-hp-Gmy" secondAttribute="centerX" id="W3D-bI-7eg"/>
                             <constraint firstAttribute="bottom" secondItem="gCY-X0-zIR" secondAttribute="bottom" id="WD6-Bv-zR5"/>
                             <constraint firstItem="LIR-OZ-Vfm" firstAttribute="top" secondItem="oWV-hp-Gmy" secondAttribute="topMargin" constant="18" id="WEC-00-ZGq"/>
                             <constraint firstItem="h9K-hu-KGx" firstAttribute="leading" secondItem="oWV-hp-Gmy" secondAttribute="leadingMargin" id="bNc-Dj-xy4"/>
                             <constraint firstItem="982-dr-lHF" firstAttribute="trailing" secondItem="oWV-hp-Gmy" secondAttribute="trailingMargin" id="cjv-H0-1p9"/>
                             <constraint firstItem="Cbd-pD-fKc" firstAttribute="leading" secondItem="LIR-OZ-Vfm" secondAttribute="trailing" constant="15" id="dSQ-fy-bge"/>
-                            <constraint firstItem="Ifv-GB-egc" firstAttribute="top" secondItem="982-dr-lHF" secondAttribute="bottom" constant="16" id="etb-6M-Qg3"/>
                             <constraint firstItem="Ifv-GB-egc" firstAttribute="leading" secondItem="Srw-Ld-j6k" secondAttribute="trailing" constant="23" id="n49-lE-Bju"/>
                             <constraint firstAttribute="trailing" secondItem="gCY-X0-zIR" secondAttribute="trailing" id="ngQ-xL-pCx"/>
-                            <constraint firstItem="Srw-Ld-j6k" firstAttribute="top" secondItem="982-dr-lHF" secondAttribute="bottom" constant="16" id="r5Y-ho-Iva"/>
+                            <constraint firstItem="Ifv-GB-egc" firstAttribute="top" secondItem="Pd1-Pe-ncW" secondAttribute="bottom" constant="8" id="qci-Qf-n6l"/>
                             <constraint firstItem="gCY-X0-zIR" firstAttribute="top" secondItem="oWV-hp-Gmy" secondAttribute="top" id="sun-7g-eX8"/>
                             <constraint firstItem="Ifv-GB-egc" firstAttribute="trailing" secondItem="oWV-hp-Gmy" secondAttribute="trailingMargin" id="wCJ-nJ-FKM"/>
                             <constraint firstItem="S84-IO-A8i" firstAttribute="top" secondItem="Srw-Ld-j6k" secondAttribute="bottom" constant="20" id="zSI-Yv-gzx"/>
@@ -389,11 +402,12 @@
                         <outlet property="nextBtn" destination="Ifv-GB-egc" id="8c1-ZC-IvH"/>
                         <outlet property="pageControlMap" destination="IHO-E2-XjD" id="Uch-70-DAt"/>
                         <outlet property="progressView" destination="Cbd-pD-fKc" id="qhJ-u5-9TL"/>
+                        <outlet property="tipInfoBtn" destination="Pd1-Pe-ncW" id="RE1-Km-3bV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18X-9R-pAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="2298.8005997001501"/>
+            <point key="canvasLocation" x="-940" y="2289.8050974512744"/>
         </scene>
         <!--ExamsVC-->
         <scene sceneID="RIH-Dk-nhl">
@@ -500,7 +514,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ult-qm-nra">
-                                        <rect key="frame" x="159" y="15" width="57" height="30"/>
+                                        <rect key="frame" x="159" y="15" width="57" height="29.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -523,21 +537,376 @@
                                     <constraint firstItem="ult-qm-nra" firstAttribute="top" secondItem="QJF-nD-99f" secondAttribute="top" constant="15" id="vft-CY-rJI"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWj-zu-M5q">
+                                <rect key="frame" x="50" y="95" width="276" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Cat Profile Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="ec3-4I-BhK">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-2A-d9E">
+                                        <rect key="frame" x="115" y="0.0" width="161" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nume Prenume Lung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnr-0T-dny">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="22"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nivel: Incepator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-dH-Q7H">
+                                                <rect key="frame" x="0.0" y="41" width="119.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obiective atinse: X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N45-3n-nHh">
+                                                <rect key="frame" x="0.0" y="80" width="142" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLa-DK-VUR">
+                                <rect key="frame" x="50" y="225" width="276" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ym4-HP-Imz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqR-B3-Tfz" customClass="ButtonWithRadius" customModule="ListenLearnSpeak" customModuleProvider="target">
+                                <rect key="frame" x="50" y="568" width="276" height="32"/>
+                                <color key="backgroundColor" red="0.30529639120000002" green="0.60157227520000001" blue="0.95585268739999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="iMq-TI-edt"/>
+                                </constraints>
+                                <state key="normal" title="Vezi obiective">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-xi-4lo">
+                                <rect key="frame" x="50" y="281" width="276" height="212"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-ik-qV3">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total lectii X / Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR9-i0-kMy">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pal-q0-Pqr">
+                                                <rect key="frame" x="0.0" y="25" width="276" height="13"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPm-eZ-LtR" customClass="GTProgressBar" customModule="GTProgressBar">
+                                                        <rect key="frame" x="0.0" y="0.0" width="263" height="13"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                                                                <color key="value" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="displayLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barFillColor">
+                                                                <color key="value" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBorderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPositionInt">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetLeft">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetRight">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetTop">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetBottom">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barBorderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barFillInset">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obj_lesson_trophy" translatesAutoresizingMaskIntoConstraints="NO" id="T6k-5z-knJ">
+                                                        <rect key="frame" x="263" y="0.0" width="13" height="13"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="13" id="CXJ-i1-wQr"/>
+                                                            <constraint firstAttribute="width" constant="13" id="EvV-hf-TRB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Cz-1h-PSb">
+                                        <rect key="frame" x="0.0" y="58" width="276" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total subiecte X / Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ux-6A-Cez">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12b-bE-v30">
+                                                <rect key="frame" x="0.0" y="25" width="276" height="13"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6j9-TF-4yy" customClass="GTProgressBar" customModule="GTProgressBar">
+                                                        <rect key="frame" x="0.0" y="0.0" width="263" height="13"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                                                                <color key="value" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="displayLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barFillColor">
+                                                                <color key="value" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBorderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPositionInt">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetLeft">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetRight">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetTop">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetBottom">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barBorderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barFillInset">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obj_topic_trophy" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-NW-0Jb">
+                                                        <rect key="frame" x="263" y="0.0" width="13" height="13"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="13" id="u4l-mR-N3S"/>
+                                                            <constraint firstAttribute="height" constant="13" id="uJn-eR-Reh"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U6u-Te-zLO">
+                                        <rect key="frame" x="0.0" y="116" width="276" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total examene X / Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUY-BD-ouB">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J8-x8-RUE">
+                                                <rect key="frame" x="0.0" y="25" width="276" height="13"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-ek-O0w" customClass="GTProgressBar" customModule="GTProgressBar">
+                                                        <rect key="frame" x="0.0" y="0.0" width="263" height="13"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                                                                <color key="value" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="displayLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barFillColor">
+                                                                <color key="value" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBorderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPositionInt">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetLeft">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetRight">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetTop">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetBottom">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barBorderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barFillInset">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obj_exam_trophy" translatesAutoresizingMaskIntoConstraints="NO" id="VbR-Bt-oEM">
+                                                        <rect key="frame" x="263" y="0.0" width="13" height="13"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="13" id="3cx-fV-bRX"/>
+                                                            <constraint firstAttribute="width" constant="13" id="KcY-dD-s3W"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MYE-cf-hYA">
+                                        <rect key="frame" x="0.0" y="174" width="276" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total puncte X / 485" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-Uv-Hvg">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-Mk-nc7">
+                                                <rect key="frame" x="0.0" y="25" width="276" height="13"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXy-vL-HVV" customClass="GTProgressBar" customModule="GTProgressBar">
+                                                        <rect key="frame" x="0.0" y="0.0" width="263" height="13"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                                                                <color key="value" red="0.47058823529411764" green="0.77647058823529413" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="displayLabel" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barFillColor">
+                                                                <color key="value" red="0.47121113570000001" green="0.77665693599999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="barBorderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPositionInt">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetLeft">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetRight">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetTop">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progressLabelInsetBottom">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barBorderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="barFillInset">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="obj_points_trophy" translatesAutoresizingMaskIntoConstraints="NO" id="XYM-8K-VUr">
+                                                        <rect key="frame" x="263" y="0.0" width="13" height="13"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="13" id="6le-ka-EU5"/>
+                                                            <constraint firstAttribute="height" constant="13" id="ou3-5N-EDG"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QJF-nD-99f" firstAttribute="top" secondItem="H5U-CV-AI5" secondAttribute="bottom" id="H0d-Vb-CJz"/>
+                            <constraint firstItem="JLa-DK-VUR" firstAttribute="leading" secondItem="dWj-zu-M5q" secondAttribute="leading" id="J40-Va-heE"/>
                             <constraint firstItem="QJF-nD-99f" firstAttribute="leading" secondItem="UPT-D2-ocv" secondAttribute="leading" id="MT1-o0-Rv8"/>
                             <constraint firstAttribute="trailing" secondItem="QJF-nD-99f" secondAttribute="trailing" id="Qfx-Ds-ylt"/>
+                            <constraint firstItem="pCO-xi-4lo" firstAttribute="leading" secondItem="dWj-zu-M5q" secondAttribute="leading" id="R0d-KR-9Ms"/>
+                            <constraint firstItem="pCO-xi-4lo" firstAttribute="top" secondItem="JLa-DK-VUR" secondAttribute="bottom" constant="55" id="Ude-1M-VYo"/>
+                            <constraint firstItem="dWj-zu-M5q" firstAttribute="top" secondItem="QJF-nD-99f" secondAttribute="bottom" constant="35" id="Uxm-b6-eWg"/>
+                            <constraint firstItem="dWj-zu-M5q" firstAttribute="centerX" secondItem="UPT-D2-ocv" secondAttribute="centerX" id="V3e-Mj-5zs"/>
                             <constraint firstItem="RTQ-lj-P14" firstAttribute="top" secondItem="bLp-1V-6GX" secondAttribute="bottom" id="VzQ-Zm-m2n"/>
+                            <constraint firstItem="BqR-B3-Tfz" firstAttribute="leading" secondItem="pCO-xi-4lo" secondAttribute="leading" id="dJP-eC-xNq"/>
+                            <constraint firstItem="pCO-xi-4lo" firstAttribute="trailing" secondItem="dWj-zu-M5q" secondAttribute="trailing" id="dcT-ul-dxd"/>
                             <constraint firstAttribute="trailing" secondItem="bLp-1V-6GX" secondAttribute="trailing" id="mty-8C-csD"/>
                             <constraint firstItem="bLp-1V-6GX" firstAttribute="leading" secondItem="UPT-D2-ocv" secondAttribute="leading" id="n8t-zM-tDe"/>
+                            <constraint firstItem="JLa-DK-VUR" firstAttribute="top" secondItem="dWj-zu-M5q" secondAttribute="bottom" constant="30" id="oSD-S3-0ZE"/>
+                            <constraint firstItem="BqR-B3-Tfz" firstAttribute="trailing" secondItem="pCO-xi-4lo" secondAttribute="trailing" id="pnj-ot-C5e"/>
+                            <constraint firstItem="JLa-DK-VUR" firstAttribute="trailing" secondItem="dWj-zu-M5q" secondAttribute="trailing" id="reg-gd-Cgw"/>
+                            <constraint firstItem="BqR-B3-Tfz" firstAttribute="top" secondItem="pCO-xi-4lo" secondAttribute="bottom" constant="75" id="vIN-X7-B6k"/>
                             <constraint firstItem="bLp-1V-6GX" firstAttribute="top" secondItem="UPT-D2-ocv" secondAttribute="top" id="yH6-zV-hYK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profil" image="icon_user" selectedImage="icon_userFilled" id="mef-4D-en4"/>
                     <connections>
+                        <outlet property="examsProgress" destination="nQG-ek-O0w" id="xG3-tT-Xd5"/>
+                        <outlet property="examsTrophy" destination="VbR-Bt-oEM" id="f76-YL-c2G"/>
+                        <outlet property="expLbl" destination="Nmv-dH-Q7H" id="kUs-7q-60g"/>
+                        <outlet property="lessonsProgress" destination="QPm-eZ-LtR" id="R6q-rQ-Yx9"/>
+                        <outlet property="lessonsTrophy" destination="T6k-5z-knJ" id="eEh-EG-FaG"/>
+                        <outlet property="nameLbl" destination="Fnr-0T-dny" id="IIV-UU-fcV"/>
+                        <outlet property="objCompletedLbl" destination="N45-3n-nHh" id="Edf-yM-eBd"/>
+                        <outlet property="pointsProgress" destination="FXy-vL-HVV" id="0d6-1P-uQY"/>
+                        <outlet property="pointsTrophy" destination="XYM-8K-VUr" id="ui1-lX-gqD"/>
                         <outlet property="titleView" destination="QJF-nD-99f" id="ccN-2u-hgU"/>
+                        <outlet property="topicsProgress" destination="6j9-TF-4yy" id="gUW-tL-ubM"/>
+                        <outlet property="topicsTrophy" destination="HVr-NW-0Jb" id="CIe-2D-vmA"/>
+                        <outlet property="totalExamsLbl" destination="tUY-BD-ouB" id="yRT-OI-0wj"/>
+                        <outlet property="totalLessonsLbl" destination="nR9-i0-kMy" id="I27-2M-BYV"/>
+                        <outlet property="totalPointsLbl" destination="Sdl-Uv-Hvg" id="IEN-fX-cvp"/>
+                        <outlet property="totalTopicsLbl" destination="0ux-6A-Cez" id="vVJ-kc-VG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nah-wV-Jyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -562,9 +931,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IE-7D-IrJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ewu-4v-ZBi">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-ZO-0tB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ewu-4v-ZBi">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -581,7 +955,7 @@
                             <constraint firstItem="iV5-Hn-bZ7" firstAttribute="top" secondItem="fUR-Mt-kI2" secondAttribute="bottom" id="w4F-t8-Avo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Harta" image="icon_location" selectedImage="icon_locationFilled" id="43S-RE-qQW">
+                    <tabBarItem key="tabBarItem" title="Lectii" image="icon_location" selectedImage="icon_locationFilled" id="43S-RE-qQW">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -590,6 +964,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="gettingDataLoader" destination="ewu-4v-ZBi" id="XJI-ii-c3B"/>
+                        <outlet property="loadBg" destination="QIu-ZO-0tB" id="xCh-DB-Dh5"/>
                         <outlet property="mapSliderSV" destination="1IE-7D-IrJ" id="QRQ-bq-qWJ"/>
                         <outlet property="pageControlMap" destination="fUR-Mt-kI2" id="6eW-S2-CRB"/>
                     </connections>
@@ -806,12 +1181,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eD-5j-Ifq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="13"/>
+            <point key="canvasLocation" x="825" y="79"/>
         </scene>
-        <!--Lesson FinishedVC-->
+        <!--StageFinishedVC-->
         <scene sceneID="Zk5-Av-f76">
             <objects>
-                <viewController storyboardIdentifier="LessonFinishedVC" id="n4I-k7-eC1" customClass="LessonFinishedVC" customModule="ListenLearnSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StageFinishedVC" title="StageFinishedVC" id="n4I-k7-eC1" customClass="StageFinishedVC" customModule="ListenLearnSpeak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ebw-74-DYP"/>
                         <viewControllerLayoutGuide type="bottom" id="dLr-S7-fSM"/>
@@ -917,7 +1292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0p-Ec-uWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="2974.362818590705"/>
+            <point key="canvasLocation" x="-940" y="3001"/>
         </scene>
     </scenes>
     <resources>
@@ -935,8 +1310,13 @@
         <image name="icon_user" width="25" height="25"/>
         <image name="icon_userFilled" width="25" height="25"/>
         <image name="icon_volumeFilled" width="25" height="25"/>
+        <image name="icons8-Cat Profile Filled-100" width="100" height="100"/>
         <image name="login_bg" width="2000" height="1333"/>
+        <image name="obj_exam_trophy" width="100" height="100"/>
         <image name="obj_lesson5" width="100" height="100"/>
+        <image name="obj_lesson_trophy" width="100" height="100"/>
+        <image name="obj_points_trophy" width="100" height="100"/>
+        <image name="obj_topic_trophy" width="100" height="100"/>
         <image name="sep" width="800" height="800"/>
     </resources>
 </document>

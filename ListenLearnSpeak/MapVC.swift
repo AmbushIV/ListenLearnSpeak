@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class MapVC: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var loadBg: UIImageView!
     @IBOutlet weak var mapSliderSV: UIScrollView!
     @IBOutlet weak var pageControlMap: UIPageControl!
     @IBOutlet weak var gettingDataLoader: UIActivityIndicatorView!
@@ -32,13 +33,14 @@ class MapVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        user.getData() { (done) in
+        self.loadFeatures()
+        
+        user.getData(stageName: "") { (done) in
             if done {
                 self.mapSliderSV.isHidden = false
-                self.loadFeatures()
                 self.gettingDataLoader.stopAnimating()
+                self.loadBg.isHidden = true
             } else {
-                self.gettingDataLoader.isHidden = false
                 self.mapSliderSV.isHidden = true
             }
             
@@ -57,10 +59,11 @@ class MapVC: UIViewController, UIScrollViewDelegate {
         
         if let featureView = Bundle.main.loadNibNamed("MapSlide", owner: self, options: nil)?.first as? MapSlide {
             
-            featureView.lesson1Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
-            featureView.lesson2Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
-            featureView.lesson3Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
-            featureView.lesson4Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
+            // Seteaza titlurile lectiilor
+            featureView.lesson1Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
+            featureView.lesson2Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
+            featureView.lesson3Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
+            featureView.lesson4Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
             featureView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
             mapSliderSV.addSubview(featureView)
             
@@ -68,9 +71,10 @@ class MapVC: UIViewController, UIScrollViewDelegate {
         
         if let featureView2 = Bundle.main.loadNibNamed("MapSlide2", owner: self, options: nil)?.first as? MapSlide2 {
             
-            featureView2.lesson5Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
-            featureView2.lesson6Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
-            featureView2.lesson7Btn.addTarget(self, action:#selector(self.backAction(_sender:)), for: .touchUpInside)
+            // Seteaza titlurile lectiilor
+            featureView2.lesson5Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
+            featureView2.lesson6Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
+            featureView2.lesson7Btn.addTarget(self, action:#selector(self.goToLessonAction(_sender:)), for: .touchUpInside)
             featureView2.frame = CGRect(x: view.frame.width , y: 0, width: view.frame.width, height: view.frame.height)
             mapSliderSV.addSubview(featureView2)
             
@@ -86,7 +90,7 @@ class MapVC: UIViewController, UIScrollViewDelegate {
         
     }
     
-    public func backAction(_sender: UIButton) {
+    public func goToLessonAction(_sender: UIButton) {
         let lessonNrInt = Int(_sender.title(for: .normal)!)!
         self.goToLesson(lectieId: lessonNrInt)
     }

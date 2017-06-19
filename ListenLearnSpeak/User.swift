@@ -23,6 +23,9 @@ class User {
     private var _totalObiectiveComplete: Int!
     private var _totalPropozitii: Int!
     private var _totalPuncte: Int!
+    private var _totalSubiecte: Int!
+    private var _obiectiv: Int!
+    private var _obiective: Dictionary<String, Any>!
     
     var userID: String {
         return _userID
@@ -91,11 +94,29 @@ class User {
         return _totalPuncte
     }
     
+    var totalSubiecte: Int {
+        if _totalSubiecte == nil {
+            _totalSubiecte = 0
+        }
+        return _totalSubiecte
+    }
+    
+    var obiectiv: Int {
+        if _obiectiv == nil {
+            _obiectiv = 0
+        }
+        return _obiectiv
+    }
+    
+    var obiective: Dictionary<String, Any> {
+        return _obiective
+    }
+    
     init(userID: String) {
         self._userID = userID
     }
     
-    func getData(completed: @escaping DownloadComplete) {
+    func getData(stageName: String, completed: @escaping DownloadComplete) {
         
         ref = Database.database().reference()
         
@@ -138,6 +159,19 @@ class User {
                 
                 if let totalPuncte = userData["totalPuncte"] as? Int {
                     self._totalPuncte = totalPuncte
+                }
+                
+                if let totalSubiecte = userData["totalSubiecte"] as? Int {
+                    self._totalSubiecte = totalSubiecte
+                }
+                
+                if let obiective = userData["obiective"] as? Dictionary<String, Int> {
+                    self._obiective = obiective
+                    
+                    if let obiectiv = obiective[stageName] {
+                        self._obiectiv = obiectiv
+                    }
+                    
                 }
                 
             }

@@ -35,7 +35,7 @@ class RegisterVC: UIViewController {
         if fullName != "" && email != "" && pass != "" {
             if pass == passConfirmation {
                 Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
-                    self.ref.child("users").child((user?.uid)!).setValue(["nume": fullName, "email": self.emailField.text!, "totalPuncte": 0, "totalCuvinte": 0, "totalPropozitii": 0, "totalExpresii": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0])
+                    self.ref.child("users").child((user?.uid)!).setValue(["nume": fullName, "email": self.emailField.text!, "totalPuncte": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0, "totalSubiecte": 0])
                     self.goToLogin()
                     print("INREGISTRAT")
                }

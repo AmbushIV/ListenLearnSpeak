@@ -61,7 +61,7 @@ class LoginVC: UIViewController {
                     
                     if error == nil {
                         
-                        self.ref.child("users").child((user?.uid)!).setValue(["nume": user?.displayName as Any, "email": user?.email as Any, "totalPuncte": 0, "totalCuvinte": 0, "totalPropozitii": 0, "totalExpresii": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0])
+                        self.ref.child("users").child((user?.uid)!).setValue(["nume": user?.displayName as Any, "email": user?.email as Any, "totalPuncte": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0, "totalSubiecte": 0, "obiective" : ["lectia1": 0, "lectia2" : 0]])
                         self.goToMap()
                         
                     } else {

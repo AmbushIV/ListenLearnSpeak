@@ -12,46 +12,50 @@ import AVFoundation
 import SwiftyJSON
 import Alamofire
 import StepProgressBar
+import EasyTipView
 
-class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelegate {
+class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelegate, EasyTipViewDelegate {
     
     @IBOutlet weak var learnSV: UIScrollView!
     @IBOutlet weak var pageControlMap: UIPageControl!
     @IBOutlet weak var progressView: StepProgressBar!
     @IBOutlet weak var listenBtn: ButtonWithRadius!
     @IBOutlet weak var nextBtn: ButtonWithRadius!
-    
-    
-    private var _arrayContent: Array<String> = []
+    @IBOutlet weak var tipInfo: UIView!
+    @IBOutlet weak var tipInfoBtn: ButtonWithRadius!
     
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
     var lesson: Lesson!
+    var topic: Topic!
     
     var titluLectie: String!
     var lessonNr: Int!
-    var btnPressed: Bool = false
+    var topicNr: Int!
+    
+    weak var tipView: EasyTipView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        lesson = Lesson(lectieId: lessonNr)
         
         learnSV.delegate = self
         synth.delegate = self
         
         nextBtn.isUserInteractionEnabled = false
         
-        lesson.getLesson() { (done) in
+        if lessonNr != nil {
             
-            if done {
+            lesson = Lesson(lectieId: lessonNr)
+            
+            lesson.getLesson() { (done) in
                 
-                let slidesCount = self.lesson.continut.count
-                
-                if self.lessonNr != nil {
+                if done {
                     
-                    self.loadFeatures()
+                    let slidesCount = self.lesson.continut.count
+                    let enumerated = self.lesson.continut.enumerated()
+                    
+                    self.loadFeatures(slidesCount: slidesCount, enumerated: enumerated)
                     self.progressView.stepsCount = slidesCount
                     self.pageControlMap.numberOfPages = slidesCount
                     self.pageControlMap.currentPage = 0
@@ -60,28 +64,78 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
                     self.myUtterance.rate = 0.1
                     
                 } else {
-                    print("Numar lectie inexistent")
+                    print("Eroare: Lectie nepreluata")
                 }
                 
-            } else {
-                print("Can't get lesson")
             }
             
-
+        } else if topicNr != nil {
+            
+            topic = Topic(subiectId: topicNr)
+            
+            topic.getTopic() { (done) in
+                
+                if done {
+                    
+                    let slidesCount = self.topic.continut.count
+                    let enumerated = self.topic.continut.enumerated()
+                    
+                    self.loadFeatures(slidesCount: slidesCount, enumerated: enumerated)
+                    self.progressView.stepsCount = slidesCount
+                    self.pageControlMap.numberOfPages = slidesCount
+                    self.pageControlMap.currentPage = 0
+                    let textToSpeech = self.topic.continut[0]["EN"] as! String
+                    self.myUtterance = AVSpeechUtterance(string: textToSpeech)
+                    self.myUtterance.rate = 0.1
+                    
+                } else {
+                    print("Eroare: Subiect nepreluat")
+                }
+                
+            }
+            
+        } else {
+            print("no")
         }
 
     }
     
-    func loadFeatures() {
+    @IBAction func tipInfoBtnPressed(_ sender: Any) {
+        
+        var preferences = EasyTipView.Preferences()
+        
+        preferences.drawing.backgroundColor = tipInfoBtn.backgroundColor!
+        
+        preferences.animating.dismissTransform = CGAffineTransform(translationX: 0, y: -15)
+        preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: -15)
+        preferences.animating.showInitialAlpha = 0
+        preferences.animating.showDuration = 1.5
+        preferences.animating.dismissDuration = 1.5
+        preferences.drawing.arrowPosition = .top
+        
+        if let tipView = tipView {
+            tipView.dismiss(withCompletion: {
+                // Info Dismiss
+            })
+        } else {
+            let text = "A - ai \n B - bee \n C - see \n D - dee"
+            let tip = EasyTipView(text: text, preferences: preferences, delegate: self)
+            tip.show(forView: tipInfoBtn)
+            tipView = tip
+        }
+        
+    }
+    
+    func loadFeatures(slidesCount: Int, enumerated: EnumeratedSequence<[Dictionary<String, Any>]>) {
         
         let scrollViewWidth = learnSV.frame.width
         let scrollViewHeight = learnSV.frame.height
         
         learnSV.isPagingEnabled = true
         learnSV.frame = CGRect(x: 0, y: 0, width: scrollViewWidth, height: scrollViewHeight)
-        learnSV.contentSize = CGSize(width: scrollViewWidth * CGFloat(lesson.continut.count), height: scrollViewHeight)
+        learnSV.contentSize = CGSize(width: scrollViewWidth * CGFloat(slidesCount), height: scrollViewHeight)
         
-        for (index, feature) in lesson.continut.enumerated() {
+        for (index, feature) in enumerated {
             
             if let featureView = Bundle.main.loadNibNamed("LearnSlider", owner: self, options: nil)?.first as? LearnSlider {
                 
@@ -105,7 +159,16 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         
         progressView.progress = pageControlMap.currentPage + 1
         
-        let textToSpeech = self.lesson.continut[pageControlMap.currentPage]["EN"] as! String
+        var textToSpeech: String!
+        
+        if lessonNr != nil {
+            textToSpeech = self.lesson.continut[pageControlMap.currentPage]["EN"] as! String
+        } else if topicNr != nil {
+            textToSpeech = self.topic.continut[pageControlMap.currentPage]["EN"] as! String
+        } else {
+            print("nimic")
+        }
+        
         self.myUtterance = AVSpeechUtterance(string: textToSpeech)
         self.myUtterance.rate = 0.1
         
@@ -142,9 +205,14 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         
         if pageControlMap.currentPage + 1 == pageControlMap.numberOfPages {
             
-            //Code to add
-            print("Final nivel")
-            self.finishLesson(lectieId: lessonNr)
+            // Stagiu terminat, acorda obiectiv + punctaj
+            if lessonNr != nil {
+                self.finishStage(stageID: lessonNr)
+            } else if topicNr != nil {
+                self.finishStage(stageID: topicNr)
+            } else {
+                print("nimic")
+            }
         
         } else {
             
@@ -157,20 +225,36 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         
     }
     
-    private func finishLesson(lectieId: Int) {
+    private func finishStage(stageID: Int) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LessonFinishedVC") as! LessonFinishedVC
-        controller.lessonNr = lectieId
+        let controller = storyboard.instantiateViewController(withIdentifier: "StageFinishedVC") as! StageFinishedVC
+        
+        if lessonNr != nil {
+            controller.lessonNr = stageID
+        } else if topicNr != nil {
+            controller.topicNr = stageID
+        } else {
+            print("nimic")
+        }
+        
         self.present(controller, animated: true, completion: nil)
         
+    }
+    
+    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
+        // Info dismissed
     }
 
     @IBAction func cancelBtnPressed(_ sender: Any) {
         
         let actionSheetController: UIAlertController = UIAlertController(title: "Atentie!", message: "Daca iesi acum vei pierde tot progresul!", preferredStyle: .alert)
         let acceptAction: UIAlertAction = UIAlertAction(title: "Accept", style: .default) { (UIAlertAction) in
-            self.dismiss(animated: true, completion: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+            self.present(controller, animated: true, completion: nil)
+            
         }
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
             //Just dismiss the action sheet

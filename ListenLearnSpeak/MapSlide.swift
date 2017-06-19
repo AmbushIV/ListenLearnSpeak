@@ -15,4 +15,9 @@ class MapSlide: UIView {
     @IBOutlet weak var lesson3Btn: UIButton!
     @IBOutlet weak var lesson4Btn: UIButton!
     
+    @IBOutlet weak var lesson1Lbl: UILabel!
+    @IBOutlet weak var lesson2Lbl: UILabel!
+    @IBOutlet weak var lesson3Lbl: UILabel!
+    @IBOutlet weak var lesson4Lbl: UILabel!
+
 }

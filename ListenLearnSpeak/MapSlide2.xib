@@ -42,6 +42,30 @@
                     </constraints>
                     <state key="normal" title="6" image="Pin-6"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plural &amp; Genuri" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-tH-iIx">
+                    <rect key="frame" x="65" y="154" width="226" height="25"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forme de raspuns" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPx-Ph-Shl">
+                    <rect key="frame" x="170" y="447" width="189" height="25"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ce sau cine?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eII-91-xRW">
+                    <rect key="frame" x="10" y="403" width="125" height="25"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AYh-8z-eKr">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,23 +75,35 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="XTL-52-nBK" secondAttribute="trailing" id="2MX-Te-g97"/>
                 <constraint firstAttribute="bottom" secondItem="AYh-8z-eKr" secondAttribute="bottom" id="5Ft-dD-dnE"/>
+                <constraint firstItem="eII-91-xRW" firstAttribute="top" secondItem="gpa-5v-eHt" secondAttribute="bottom" constant="8" id="6fs-cV-S66"/>
                 <constraint firstItem="AYh-8z-eKr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8gF-Pd-byW"/>
+                <constraint firstItem="a0D-tH-iIx" firstAttribute="top" secondItem="xZN-ai-bfQ" secondAttribute="bottom" constant="8" id="9A2-mS-oUI"/>
                 <constraint firstAttribute="trailing" secondItem="woQ-NX-ieN" secondAttribute="trailing" constant="70" id="9sN-kK-GAd"/>
                 <constraint firstItem="gpa-5v-eHt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="GVY-8y-BeD"/>
+                <constraint firstItem="eII-91-xRW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="KM5-NT-i7Z"/>
                 <constraint firstItem="woQ-NX-ieN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="324" id="L0u-IT-Wsz"/>
+                <constraint firstItem="woQ-NX-ieN" firstAttribute="leading" secondItem="eII-91-xRW" secondAttribute="trailing" constant="90" id="Nvi-vd-t64"/>
+                <constraint firstItem="kPx-Ph-Shl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="170" id="QfM-sL-bk0"/>
+                <constraint firstAttribute="trailing" secondItem="kPx-Ph-Shl" secondAttribute="trailing" constant="16" id="RnL-d5-d57"/>
+                <constraint firstItem="a0D-tH-iIx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="65" id="SLz-wf-ucd"/>
                 <constraint firstAttribute="trailing" secondItem="AYh-8z-eKr" secondAttribute="trailing" id="SXn-sq-ny7"/>
+                <constraint firstItem="kPx-Ph-Shl" firstAttribute="top" secondItem="woQ-NX-ieN" secondAttribute="bottom" constant="8" id="SYD-sL-GQX"/>
                 <constraint firstAttribute="bottom" secondItem="XTL-52-nBK" secondAttribute="bottom" id="Xxi-uX-geP"/>
                 <constraint firstItem="XTL-52-nBK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b7I-Hz-Q1m"/>
                 <constraint firstItem="XTL-52-nBK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eRG-0j-qmJ"/>
                 <constraint firstItem="AYh-8z-eKr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f8Z-LR-ddK"/>
                 <constraint firstItem="xZN-ai-bfQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="fuu-ya-JKh"/>
                 <constraint firstItem="gpa-5v-eHt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="280" id="p0J-ig-ChE"/>
+                <constraint firstAttribute="trailing" secondItem="a0D-tH-iIx" secondAttribute="trailing" constant="84" id="pZi-ic-Ge2"/>
                 <constraint firstAttribute="trailing" secondItem="xZN-ai-bfQ" secondAttribute="trailing" constant="157" id="sZm-SA-zUU"/>
             </constraints>
             <connections>
                 <outlet property="lesson5Btn" destination="gpa-5v-eHt" id="Aas-TC-qac"/>
+                <outlet property="lesson5Lbl" destination="eII-91-xRW" id="RIk-2k-IfO"/>
                 <outlet property="lesson6Btn" destination="woQ-NX-ieN" id="Q89-Kp-wmi"/>
+                <outlet property="lesson6Lbl" destination="kPx-Ph-Shl" id="EFF-9u-GLL"/>
                 <outlet property="lesson7Btn" destination="xZN-ai-bfQ" id="Jfg-vD-QSg"/>
+                <outlet property="lesson7Lbl" destination="a0D-tH-iIx" id="MqZ-MO-gxg"/>
                 <outlet property="lockedStage" destination="AYh-8z-eKr" id="LYF-tC-Cyd"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="53.5"/>

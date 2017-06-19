@@ -15,4 +15,8 @@ class MapSlide2: UIView {
     @IBOutlet weak var lesson7Btn: UIButton!
     @IBOutlet weak var lockedStage: UIImageView!
     
+    @IBOutlet weak var lesson5Lbl: UILabel!
+    @IBOutlet weak var lesson6Lbl: UILabel!
+    @IBOutlet weak var lesson7Lbl: UILabel!
+    
 }

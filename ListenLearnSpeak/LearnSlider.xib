@@ -15,53 +15,57 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="TEXT DE ASCULTAT" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bv-gr-fUs" customClass="TextViewStyle" customModule="ListenLearnSpeak" customModuleProvider="target">
-                    <rect key="frame" x="92.5" y="210" width="262.5" height="150"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="tr5-Jx-FbF"/>
-                    </constraints>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="TEXT DE ASCULTAT" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDh-oq-tRP" customClass="TextViewStyle" customModule="ListenLearnSpeak" customModuleProvider="target">
-                    <rect key="frame" x="92.5" y="10" width="262.5" height="150"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="abx-I3-ppy"/>
-                    </constraints>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-F3-utx">
-                    <rect key="frame" x="20" y="217" width="64.5" height="27"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfZ-HD-cex">
-                    <rect key="frame" x="20" y="17" width="33.5" height="27"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EQd-hp-Gln">
+                    <rect key="frame" x="20" y="15" width="335" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfZ-HD-cex">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="RDK-Iq-gio"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TEXT DE ASCULTAT" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDh-oq-tRP" customClass="TextViewStyle" customModule="ListenLearnSpeak" customModuleProvider="target">
+                            <rect key="frame" x="50" y="0.0" width="285" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                        </textView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-vM-aqc">
+                    <rect key="frame" x="20" y="85" width="335" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-F3-utx">
+                            <rect key="frame" x="0.0" y="6.5" width="50" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="EjW-p5-Cld"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TEXT DE ASCULTAT" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bv-gr-fUs" customClass="TextViewStyle" customModule="ListenLearnSpeak" customModuleProvider="target">
+                            <rect key="frame" x="50" y="0.0" width="285" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                        </textView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="hn0-F3-utx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="1fR-gi-ZgO"/>
-                <constraint firstItem="7bv-gr-fUs" firstAttribute="leading" secondItem="hn0-F3-utx" secondAttribute="trailing" constant="8" id="44o-YF-iak"/>
-                <constraint firstItem="JDh-oq-tRP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="GAf-Tu-uTb"/>
-                <constraint firstItem="JDh-oq-tRP" firstAttribute="leading" secondItem="7bv-gr-fUs" secondAttribute="leading" id="LTr-gJ-ps6"/>
-                <constraint firstItem="JDh-oq-tRP" firstAttribute="trailing" secondItem="7bv-gr-fUs" secondAttribute="trailing" id="QOs-c9-OZ3"/>
-                <constraint firstItem="hn0-F3-utx" firstAttribute="top" secondItem="BfZ-HD-cex" secondAttribute="bottom" constant="173" id="Xzv-5b-21R"/>
-                <constraint firstAttribute="trailing" secondItem="JDh-oq-tRP" secondAttribute="trailing" constant="20" id="YZp-e8-brH"/>
-                <constraint firstItem="7bv-gr-fUs" firstAttribute="top" secondItem="JDh-oq-tRP" secondAttribute="bottom" constant="50" id="e8J-5R-aBu"/>
-                <constraint firstItem="BfZ-HD-cex" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="iGE-Bx-tja"/>
-                <constraint firstAttribute="trailing" secondItem="7bv-gr-fUs" secondAttribute="trailing" constant="20" id="oqS-0L-UaL"/>
-                <constraint firstItem="BfZ-HD-cex" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="r4e-Vt-sb8"/>
-                <constraint firstItem="JDh-oq-tRP" firstAttribute="leading" secondItem="BfZ-HD-cex" secondAttribute="trailing" constant="39.5" id="y5k-yE-pGi"/>
+                <constraint firstItem="pqw-vM-aqc" firstAttribute="top" secondItem="EQd-hp-Gln" secondAttribute="bottom" constant="30" id="Dnv-Em-gqz"/>
+                <constraint firstAttribute="trailing" secondItem="EQd-hp-Gln" secondAttribute="trailing" constant="20" id="Oo2-tc-OvE"/>
+                <constraint firstItem="EQd-hp-Gln" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="SIx-FT-xh9"/>
+                <constraint firstAttribute="trailing" secondItem="pqw-vM-aqc" secondAttribute="trailing" constant="20" id="SiC-gS-Mk2"/>
+                <constraint firstItem="pqw-vM-aqc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="bU0-sc-ujg"/>
+                <constraint firstItem="EQd-hp-Gln" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="yMG-Tj-cOi"/>
             </constraints>
             <connections>
                 <outlet property="roTextLbl" destination="JDh-oq-tRP" id="FyK-4D-HER"/>

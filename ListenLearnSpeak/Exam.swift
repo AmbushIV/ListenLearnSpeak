@@ -1,57 +1,49 @@
 //
-//  Lesson.swift
+//  Exam.swift
 //  ListenLearnSpeak
 //
-//  Created by Ionut Demeterca on 11/06/2017.
+//  Created by Ionut Demeterca on 18/06/2017.
 //  Copyright © 2017 Ionut Demeterca. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-class Lesson {
-    
+class Exam {
+ 
     private var _titlu: String!
-    private var _lectieId: Int!
+    private var _examId: Int!
     private var _continut = [Dictionary<String, Any>]()
-    private var _nrDeLectii: Int!
-    private var _titluriLectii = [String]()
+    private var _nrDeExamene: Int!
     
     var titlu: String {
         return _titlu
     }
     
-    var lectieId: Int {
-        return _lectieId
+    var examId: Int {
+        return _examId
     }
     
     var continut: [Dictionary<String, Any>] {
         return _continut
     }
     
-    var nrDeLectii: Int {
-        if _nrDeLectii == nil {
-            _nrDeLectii = 0
+    var nrDeExamene: Int {
+        if _nrDeExamene == nil {
+            _nrDeExamene = 0
         }
-        return _nrDeLectii
+        return _nrDeExamene
     }
     
-    var titluriLectii: [String] {
-        if _titluriLectii == nil {
-            _titluriLectii = []
-        }
-        return _titluriLectii
-    }
-
-    init(lectieId: Int) {
-        self._lectieId = lectieId
+    init(examId: Int) {
+        self._examId = examId
     }
     
     
-    func getLesson(completed: @escaping DownloadComplete) {
+    func getExam(completed: @escaping DownloadComplete) {
         
-        let URL = "http://listenlearnspeak.xyz/api/lessons/\(_lectieId!)/"
-
+        let URL = "http://listenlearnspeak.xyz/api/lessons/\(_examId!)/"
+        
         Alamofire.request(URL).responseJSON { (response) in
             
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
@@ -72,16 +64,16 @@ class Lesson {
         
     }
     
-    func getLessonsNr(completed: @escaping DownloadComplete) {
+    func getExamsNr(completed: @escaping DownloadComplete) {
         
-        let lessonsNrURL = "http://listenlearnspeak.xyz/api/lessons/"
+        let lessonsNrURL = "http://listenlearnspeak.xyz/api/exams/"
         
         Alamofire.request(lessonsNrURL).responseJSON { (response) in
             
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
                 
-                if let nrDeLectii = dict["nrDeLectii"] as? Int {
-                    self._nrDeLectii = nrDeLectii
+                if let nrDeExamene = dict["nrDeExamene"] as? Int {
+                    self._nrDeExamene = nrDeExamene
                 }
                 
             }
@@ -91,6 +83,5 @@ class Lesson {
         }
         
     }
-
     
 }
