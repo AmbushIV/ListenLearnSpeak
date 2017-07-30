@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class TopicsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

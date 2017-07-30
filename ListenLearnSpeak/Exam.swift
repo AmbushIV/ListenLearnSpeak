@@ -15,6 +15,7 @@ class Exam {
     private var _examId: Int!
     private var _continut = [Dictionary<String, Any>]()
     private var _nrDeExamene: Int!
+    private var _correctText: String!
     
     var titlu: String {
         return _titlu
@@ -35,14 +36,24 @@ class Exam {
         return _nrDeExamene
     }
     
+    var correctText: String {
+        if _correctText == nil {
+            _correctText = ""
+        }
+        return _correctText
+    }
+    
     init(examId: Int) {
         self._examId = examId
     }
     
+    func getExamTitle(titlu: String){
+        self._titlu = titlu
+    }
     
     func getExam(completed: @escaping DownloadComplete) {
         
-        let URL = "http://listenlearnspeak.xyz/api/lessons/\(_examId!)/"
+        let URL = "http://listenlearnspeak.xyz/api/exams/\(_examId!)/"
         
         Alamofire.request(URL).responseJSON { (response) in
             
@@ -54,6 +65,11 @@ class Exam {
                 
                 if let continut = dict["continut"] as? [Dictionary<String, String>] {
                     self._continut = continut
+                    
+                    if let correctText = continut[0]["correctText"] {
+                        self._correctText = correctText
+                    }
+                    
                 }
                 
             }

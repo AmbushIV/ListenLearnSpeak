@@ -24,8 +24,13 @@ class StageFinishedVC: UIViewController {
     
     var lessonNr: Int!
     var topicNr: Int!
+    var examNr: Int!
+    var examSuccess: Int!
     var objName: String!
     var objPoints: Int!
+    var tip: String!
+    var success: Bool! = false
+    var nrOfStages: Int!
     
     var stageName: String = ""
     
@@ -39,25 +44,52 @@ class StageFinishedVC: UIViewController {
         if lessonNr != nil {
             
             stageName = "lectia\(lessonNr!)"
-            objective = Objective(objNr: "lectia\(lessonNr!)")
-            objImage.image = UIImage(named: "obj_lesson\(self.lessonNr!)")
+            tip = "lectia"
+            objective = Objective(objNr: lessonNr!)
+            objImage.image = UIImage(named: "obj_lectia\(self.lessonNr!)")
             congratsLbl.text = congratsLbl.text?.replacingOccurrences(of: "X", with: "\(lessonNr!)")
+            
+            if lessonNr == nrOfStages {
+                nextBtn.isHidden = true
+            }
             
         } else if topicNr != nil {
             
             stageName = "subiect\(topicNr!)"
-            objective = Objective(objNr: "subiect\(topicNr!)")
-            objImage.image = UIImage(named: "obj_topic\(self.topicNr!)")
+            tip = "subiect"
+            objective = Objective(objNr: topicNr!)
+            objImage.image = UIImage(named: "obj_subiect\(self.topicNr!)")
             congratsLbl.text = congratsLbl.text?.replacingOccurrences(of: "lectia", with: "subiectul")
             congratsLbl.text = congratsLbl.text?.replacingOccurrences(of: "X", with: "\(topicNr!)")
             nextBtn.setTitle("Subiectul urmator", for: .normal)
             
-        } else {
+            if topicNr == nrOfStages {
+                nextBtn.isHidden = true
+            }
+            
+        } else if examNr != nil {
+            
+            stageName = "examen\(examNr!)"
+            tip = "examen"
+            objective = Objective(objNr: examNr!)
+            nextBtn.isHidden = true
+            
+            if success == true {
+                objImage.image = UIImage(named: "obj_examen\(self.examNr!)")
+                congratsLbl.text = "Ai promovat!"
+            } else {
+                objImage.isHidden = true
+                objectiveNameLbl.isHidden = true
+                pointsWonLbl.isHidden = true
+                congratsLbl.text = "Nu ai promovat!"
+            }
+            
+        }else {
             print("nimic")
         }
 
         // Preia date obiectiv curent pentru actualizarea progresului
-        objective.getObj() { (done) in
+        objective.getObj(tip: tip) { (done) in
             
             if done {
                 
@@ -74,22 +106,48 @@ class StageFinishedVC: UIViewController {
                             
                             let acordaObiectiv = 1
                             let totalPuncte = self.user.totalPuncte + self.objective.objPoints
-                            var totalOb = 1
+                            var totalOb = self.user.totalObiectiveComplete
+                            var totalLectii = self.user.totalLectii
+                            var totalSubiecte = self.user.totalSubiecte
+                            var totalExamene = self.user.totalExamene
                             
-                            for (_, en) in self.user.obiective {
-                                if let nr = en as? Int {
-                                    if nr == 1 {
+                            for (_, en) in self.user.obiective.enumerated() {
+                                if let nr = en.value as? Int {
+                                    if nr == 0 && self.lessonNr != nil && en.key == "lectia\(self.lessonNr!)" {
                                         totalOb += 1
+                                        totalLectii += 1
+                                    } else if nr == 0 && self.topicNr != nil && en.key == "subiect\(self.topicNr!)" {
+                                        totalOb += 1
+                                        totalSubiecte += 1
+                                    } else if nr == 0 && self.examNr != nil && en.key == "examen\(self.examNr!)" {
+                                        totalOb += 1
+                                        totalExamene += 1
                                     }
                                 }
-                                
                             }
                             
-                            let updateUser = ["/users/\(self.userID!)/totalPuncte": totalPuncte,
-                                              "/users/\(self.userID!)/obiective/\(self.stageName)": acordaObiectiv,
-                                              "/users/\(self.userID!)/totalObiectiveComplete": totalOb]
-                            self.user.ref.updateChildValues(updateUser)
-
+                            if self.lessonNr != nil {
+                                let updateUser = ["/users/\(self.userID!)/totalLectii": totalLectii,
+                                                  "/users/\(self.userID!)/totalPuncte": totalPuncte,
+                                                  "/users/\(self.userID!)/obiective/\(self.stageName)": acordaObiectiv,
+                                                  "/users/\(self.userID!)/totalObiectiveComplete": totalOb]
+                                self.user.ref.updateChildValues(updateUser)
+                            } else if self.topicNr != nil {
+                                let updateUser = ["/users/\(self.userID!)/totalSubiecte": totalSubiecte,
+                                                  "/users/\(self.userID!)/totalPuncte": totalPuncte,
+                                                  "/users/\(self.userID!)/obiective/\(self.stageName)": acordaObiectiv,
+                                                  "/users/\(self.userID!)/totalObiectiveComplete": totalOb]
+                                self.user.ref.updateChildValues(updateUser)
+                            } else if self.examNr != nil && self.success == true {
+                                let updateUser = ["/users/\(self.userID!)/totalExamene": totalExamene,
+                                                  "/users/\(self.userID!)/totalPuncte": totalPuncte,
+                                                  "/users/\(self.userID!)/obiective/\(self.stageName)": acordaObiectiv,
+                                                  "/users/\(self.userID!)/totalObiectiveComplete": totalOb]
+                                self.user.ref.updateChildValues(updateUser)
+                            } else {
+                                print("nimic")
+                            }
+                            
                         } else {
                          
                             self.congratsLbl.text = "Iti place sa repeti nu?"

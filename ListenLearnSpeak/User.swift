@@ -185,4 +185,29 @@ class User {
         
     }
     
+    func checkObjectives(completed: @escaping DownloadComplete) {
+        
+        ref = Database.database().reference()
+        
+        ref.child("users").child(_userID).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            // Preia date utilizator
+            if let userData = snapshot.value as? Dictionary<String, Any> {
+                
+                if let obiective = userData["obiective"] as? Dictionary<String, Int> {
+                    self._obiective = obiective
+                    
+                }
+                
+            }
+            
+            completed(true)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+            completed(false)
+        }
+        
+    }
+    
 }

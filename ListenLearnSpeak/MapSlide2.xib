@@ -70,9 +70,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Lock-100" translatesAutoresizingMaskIntoConstraints="NO" id="mBd-jy-ChK">
+                    <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="GaM-yA-QxA"/>
+                        <constraint firstAttribute="width" constant="100" id="u1C-sj-eVF"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="mBd-jy-ChK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0m5-iI-6EY"/>
                 <constraint firstAttribute="trailing" secondItem="XTL-52-nBK" secondAttribute="trailing" id="2MX-Te-g97"/>
                 <constraint firstAttribute="bottom" secondItem="AYh-8z-eKr" secondAttribute="bottom" id="5Ft-dD-dnE"/>
                 <constraint firstItem="eII-91-xRW" firstAttribute="top" secondItem="gpa-5v-eHt" secondAttribute="bottom" constant="8" id="6fs-cV-S66"/>
@@ -89,6 +97,7 @@
                 <constraint firstAttribute="trailing" secondItem="AYh-8z-eKr" secondAttribute="trailing" id="SXn-sq-ny7"/>
                 <constraint firstItem="kPx-Ph-Shl" firstAttribute="top" secondItem="woQ-NX-ieN" secondAttribute="bottom" constant="8" id="SYD-sL-GQX"/>
                 <constraint firstAttribute="bottom" secondItem="XTL-52-nBK" secondAttribute="bottom" id="Xxi-uX-geP"/>
+                <constraint firstItem="mBd-jy-ChK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YGz-rR-FqU"/>
                 <constraint firstItem="XTL-52-nBK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b7I-Hz-Q1m"/>
                 <constraint firstItem="XTL-52-nBK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eRG-0j-qmJ"/>
                 <constraint firstItem="AYh-8z-eKr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f8Z-LR-ddK"/>
@@ -104,6 +113,7 @@
                 <outlet property="lesson6Lbl" destination="kPx-Ph-Shl" id="EFF-9u-GLL"/>
                 <outlet property="lesson7Btn" destination="xZN-ai-bfQ" id="Jfg-vD-QSg"/>
                 <outlet property="lesson7Lbl" destination="a0D-tH-iIx" id="MqZ-MO-gxg"/>
+                <outlet property="lockImage" destination="mBd-jy-ChK" id="rb0-nG-00z"/>
                 <outlet property="lockedStage" destination="AYh-8z-eKr" id="LYF-tC-Cyd"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="53.5"/>
@@ -113,6 +123,7 @@
         <image name="Pin-5" width="317" height="452"/>
         <image name="Pin-6" width="317" height="452"/>
         <image name="Pin-7" width="317" height="452"/>
+        <image name="icons8-Lock-100" width="100" height="100"/>
         <image name="slide2Fix" width="750" height="1334"/>
     </resources>
 </document>

@@ -14,16 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DragDropUI.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>DragDropiOS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EasyTipView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GTProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,22 +59,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PopupDialog.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>StepProgressBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>TagListView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>UICircularProgressRing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,12 +87,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4F03B478DFD2997405947D1F9096710E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55DB1C0DC6B08CBD01D2B960D3D589AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>593E9479C06FB200807D11AB29EB50BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5B5AC3C06B783F8674FDB4C0F900B56A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6202C9FAB41650AC23FFBD8A1B02C7EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69784DB4D922BE4B764EAAB2DBB8F471</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>727D48E8A1B75BBCD1F6A830DF75EBE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,47 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90F6299B16DB868E0ADB9D397D7D3940</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>937C0CBD241A964F84866783844A10C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>991C445B77F030F02D7F5422E59753F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0CA836B2CDDC406F7985BD8E93184F5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF2A43BC1FF9560183E3EA43C3921021</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF4CF0EE676C060211A4CA0AAD6390C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECC1EF1FC2F3696C2DEA14AADAA24B83</key>
 		<dict>
 			<key>primary</key>
 			<true/>

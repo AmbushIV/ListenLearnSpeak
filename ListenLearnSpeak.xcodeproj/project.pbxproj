@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F0D9E501EF5DB94003BF47A /* StageFinishedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9E4F1EF5DB94003BF47A /* StageFinishedVC.swift */; };
+		7F1D15FE1F1EBA2D005A7611 /* ResetPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1D15FD1F1EBA2D005A7611 /* ResetPassVC.swift */; };
 		7F1E98691EE728F9003BEDA8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E98681EE728F9003BEDA8 /* RegisterVC.swift */; };
 		7F1E986B1EE75F52003BEDA8 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E986A1EE75F52003BEDA8 /* MapVC.swift */; };
 		7F1E986D1EE75F66003BEDA8 /* TopicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E986C1EE75F66003BEDA8 /* TopicsVC.swift */; };
@@ -20,11 +21,17 @@
 		7F2C04BD1EEEF25000F4E5B7 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */; };
 		7F2C04C11EEEF80E00F4E5B7 /* LearnSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C04C01EEEF80E00F4E5B7 /* LearnSlider.xib */; };
 		7F2C04C31EEEF82700F4E5B7 /* LearnSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */; };
+		7F3E76431EF88BF400534DC4 /* ObjectivesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E76421EF88BF400534DC4 /* ObjectivesVC.swift */; };
 		7F6451161EF82AE4005178EE /* EasyTipView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6451151EF82AE4005178EE /* EasyTipView.framework */; };
 		7F64511A1EF85753005178EE /* GTProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6451191EF85753005178EE /* GTProgressBar.framework */; };
+		7F708C0E1F1E179800C236DA /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F708C0D1F1E179800C236DA /* PopupDialog.framework */; };
 		7F80043F1EF17C9F0051D909 /* MapSlide2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F80043E1EF17C9F0051D909 /* MapSlide2.xib */; };
 		7F8004431EF17CBF0051D909 /* MapSlide2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8004421EF17CBF0051D909 /* MapSlide2.swift */; };
 		7F8004481EF405470051D909 /* StepProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8004471EF405470051D909 /* StepProgressBar.framework */; };
+		7F868BD91EFAA28700E1ED45 /* ObjectivesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F868BD81EFAA28700E1ED45 /* ObjectivesViewCell.swift */; };
+		7F868BDB1EFAC0AB00E1ED45 /* obiective.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F868BDA1EFAC0AB00E1ED45 /* obiective.csv */; };
+		7F8A80001EFB4283008F86F9 /* ExamsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A7FFF1EFB4283008F86F9 /* ExamsViewCell.swift */; };
+		7F8A80021EFB476D008F86F9 /* exams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F8A80011EFB476D008F86F9 /* exams.csv */; };
 		7FA5B9011EE5B8B600BC1E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */; };
 		7FA5B9031EE5B8B600BC1E33 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5B9021EE5B8B600BC1E33 /* LoginVC.swift */; };
 		7FA5B9081EE5B8B600BC1E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA5B9071EE5B8B600BC1E33 /* Assets.xcassets */; };
@@ -42,7 +49,15 @@
 		7FB50D1C1EEDDCFA00E33E7D /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB50D1B1EEDDCFA00E33E7D /* Lesson.swift */; };
 		7FB838211EF0340C00461F52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB838201EF0340C00461F52 /* Constants.swift */; };
 		7FB838231EF0853500461F52 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB838221EF0853500461F52 /* Alamofire.framework */; };
+		7FBC842C1F02D18000870229 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC842B1F02D18000870229 /* SettingsVC.swift */; };
+		7FBC84321F02F60800870229 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC842F1F02F60800870229 /* CosmosDistrib.swift */; };
+		7FBC84331F02F60800870229 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBC84301F02F60800870229 /* RatingViewController.swift */; };
+		7FBC84341F02F60800870229 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FBC84311F02F60800870229 /* RatingViewController.xib */; };
 		7FCD1FA11EEF57A9004530E3 /* TextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */; };
+		7FDAD4E71EFBD3C000FD66B9 /* ExamType1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAD4E61EFBD3C000FD66B9 /* ExamType1VC.swift */; };
+		7FDAD4EA1EFBF2C900FD66B9 /* ExamType1Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDAD4E91EFBF2C900FD66B9 /* ExamType1Slider.swift */; };
+		7FDAD4EC1EFBF2D800FD66B9 /* ExamType1Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FDAD4EB1EFBF2D800FD66B9 /* ExamType1Slider.xib */; };
+		7FDAD4EE1EFC210A00FD66B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDAD4ED1EFC210A00FD66B9 /* AudioToolbox.framework */; };
 		7FEAE4ED1EF6917500B98F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAE4EC1EF6917500B98F56 /* User.swift */; };
 		7FEAE4EF1EF6C9E400B98F56 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAE4EE1EF6C9E400B98F56 /* Objective.swift */; };
 		7FEAE4F11EF71A0E00B98F56 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAE4F01EF71A0E00B98F56 /* Topic.swift */; };
@@ -72,6 +87,7 @@
 		4DA0D9F0854AE1C1B2A91896 /* Pods-ListenLearnSpeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenLearnSpeak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak.debug.xcconfig"; sourceTree = "<group>"; };
 		4EA1B3FE6505815DD50656F2 /* Pods_ListenLearnSpeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListenLearnSpeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0D9E4F1EF5DB94003BF47A /* StageFinishedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageFinishedVC.swift; sourceTree = "<group>"; };
+		7F1D15FD1F1EBA2D005A7611 /* ResetPassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassVC.swift; sourceTree = "<group>"; };
 		7F1E98681EE728F9003BEDA8 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		7F1E986A1EE75F52003BEDA8 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		7F1E986C1EE75F66003BEDA8 /* TopicsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsVC.swift; sourceTree = "<group>"; };
@@ -84,12 +100,18 @@
 		7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
 		7F2C04C01EEEF80E00F4E5B7 /* LearnSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnSlider.xib; sourceTree = "<group>"; };
 		7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnSlider.swift; sourceTree = "<group>"; };
+		7F3E76421EF88BF400534DC4 /* ObjectivesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectivesVC.swift; sourceTree = "<group>"; };
 		7F6451151EF82AE4005178EE /* EasyTipView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyTipView.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/EasyTipView/EasyTipView.framework"; sourceTree = "<group>"; };
 		7F6451191EF85753005178EE /* GTProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTProgressBar.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/GTProgressBar/GTProgressBar.framework"; sourceTree = "<group>"; };
+		7F708C0D1F1E179800C236DA /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework"; sourceTree = "<group>"; };
 		7F80043E1EF17C9F0051D909 /* MapSlide2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSlide2.xib; sourceTree = "<group>"; };
 		7F8004421EF17CBF0051D909 /* MapSlide2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSlide2.swift; sourceTree = "<group>"; };
 		7F8004451EF401460051D909 /* DottedProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DottedProgressBar.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/DottedProgressBar/DottedProgressBar.framework"; sourceTree = "<group>"; };
 		7F8004471EF405470051D909 /* StepProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StepProgressBar.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/StepProgressBar/StepProgressBar.framework"; sourceTree = "<group>"; };
+		7F868BD81EFAA28700E1ED45 /* ObjectivesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectivesViewCell.swift; sourceTree = "<group>"; };
+		7F868BDA1EFAC0AB00E1ED45 /* obiective.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = obiective.csv; sourceTree = "<group>"; };
+		7F8A7FFF1EFB4283008F86F9 /* ExamsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewCell.swift; sourceTree = "<group>"; };
+		7F8A80011EFB476D008F86F9 /* exams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exams.csv; sourceTree = "<group>"; };
 		7FA5B8FD1EE5B8B600BC1E33 /* ListenLearnSpeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListenLearnSpeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA5B9001EE5B8B600BC1E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA5B9021EE5B8B600BC1E33 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -116,12 +138,23 @@
 		7FB50D1B1EEDDCFA00E33E7D /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		7FB838201EF0340C00461F52 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FB838221EF0853500461F52 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		7FBC842B1F02D18000870229 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		7FBC842D1F02EFCC00870229 /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = "Pods/../build/Debug-iphoneos/PopupDialog/PopupDialog.framework"; sourceTree = "<group>"; };
+		7FBC842F1F02F60800870229 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		7FBC84301F02F60800870229 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		7FBC84311F02F60800870229 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewStyle.swift; sourceTree = "<group>"; };
+		7FDAD4E61EFBD3C000FD66B9 /* ExamType1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamType1VC.swift; sourceTree = "<group>"; };
+		7FDAD4E91EFBF2C900FD66B9 /* ExamType1Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamType1Slider.swift; sourceTree = "<group>"; };
+		7FDAD4EB1EFBF2D800FD66B9 /* ExamType1Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamType1Slider.xib; sourceTree = "<group>"; };
+		7FDAD4ED1EFC210A00FD66B9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7FEAE4EC1EF6917500B98F56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FEAE4EE1EF6C9E400B98F56 /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
 		7FEAE4F01EF71A0E00B98F56 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		7FEAE4F21EF71A1600B98F56 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		7FEAE4F41EF730DD00B98F56 /* PinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinButton.swift; sourceTree = "<group>"; };
+		7FF0C1641EFD2E4E00A62470 /* DragDropiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DragDropiOS.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/DragDropiOS/DragDropiOS.framework"; sourceTree = "<group>"; };
+		7FF0C1651EFD2E4E00A62470 /* DragDropUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DragDropUI.framework; path = "../../Library/Developer/Xcode/DerivedData/ListenLearnSpeak-cduvqyztuyvcxrgrzhurcklvqdow/Build/Products/Debug-iphonesimulator/DragDropUI/DragDropUI.framework"; sourceTree = "<group>"; };
 		9DABBA88948EA3A93EDB5340 /* Pods-ListenLearnSpeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenLearnSpeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListenLearnSpeak/Pods-ListenLearnSpeak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,9 +163,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F708C0E1F1E179800C236DA /* PopupDialog.framework in Frameworks */,
 				7F64511A1EF85753005178EE /* GTProgressBar.framework in Frameworks */,
 				7F6451161EF82AE4005178EE /* EasyTipView.framework in Frameworks */,
 				7F8004481EF405470051D909 /* StepProgressBar.framework in Frameworks */,
+				7FDAD4EE1EFC210A00FD66B9 /* AudioToolbox.framework in Frameworks */,
 				7FB838231EF0853500461F52 /* Alamofire.framework in Frameworks */,
 				7FA5B9371EE5FAB900BC1E33 /* FacebookCore.framework in Frameworks */,
 				7FA5B9381EE5FAB900BC1E33 /* FacebookLogin.framework in Frameworks */,
@@ -242,6 +277,10 @@
 				7FAA5B871EE8BA6F0085D453 /* WelcomeVC.swift */,
 				7F2C04BC1EEEF25000F4E5B7 /* LearnVC.swift */,
 				7F0D9E4F1EF5DB94003BF47A /* StageFinishedVC.swift */,
+				7F3E76421EF88BF400534DC4 /* ObjectivesVC.swift */,
+				7FDAD4E61EFBD3C000FD66B9 /* ExamType1VC.swift */,
+				7FBC842B1F02D18000870229 /* SettingsVC.swift */,
+				7F1D15FD1F1EBA2D005A7611 /* ResetPassVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -256,6 +295,10 @@
 				7F2C04C21EEEF82700F4E5B7 /* LearnSlider.swift */,
 				7FCD1FA01EEF57A9004530E3 /* TextViewStyle.swift */,
 				7FEAE4F41EF730DD00B98F56 /* PinButton.swift */,
+				7F868BD81EFAA28700E1ED45 /* ObjectivesViewCell.swift */,
+				7F8A7FFF1EFB4283008F86F9 /* ExamsViewCell.swift */,
+				7FDAD4EB1EFBF2D800FD66B9 /* ExamType1Slider.xib */,
+				7FDAD4E91EFBF2C900FD66B9 /* ExamType1Slider.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -281,8 +324,13 @@
 				7FA5B9091EE5B8B600BC1E33 /* LaunchScreen.storyboard */,
 				7FA5B90C1EE5B8B600BC1E33 /* Info.plist */,
 				7FA5B9331EE5D74E00BC1E33 /* GoogleService-Info.plist */,
+				7F8A80011EFB476D008F86F9 /* exams.csv */,
+				7F868BDA1EFAC0AB00E1ED45 /* obiective.csv */,
 				7F2C04B81EEEEE8E00F4E5B7 /* subiecte.csv */,
 				7F2C04BA1EEEEEAF00F4E5B7 /* csv.swift */,
+				7FBC842F1F02F60800870229 /* CosmosDistrib.swift */,
+				7FBC84301F02F60800870229 /* RatingViewController.swift */,
+				7FBC84311F02F60800870229 /* RatingViewController.xib */,
 				7FA5B93D1EE5FD7200BC1E33 /* ListenLearnSpeak.entitlements */,
 			);
 			name = Utils;
@@ -299,6 +347,11 @@
 		D9189F324AF0456AA3F402E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F708C0D1F1E179800C236DA /* PopupDialog.framework */,
+				7FBC842D1F02EFCC00870229 /* PopupDialog.framework */,
+				7FF0C1641EFD2E4E00A62470 /* DragDropiOS.framework */,
+				7FF0C1651EFD2E4E00A62470 /* DragDropUI.framework */,
+				7FDAD4ED1EFC210A00FD66B9 /* AudioToolbox.framework */,
 				7F6451191EF85753005178EE /* GTProgressBar.framework */,
 				7F6451151EF82AE4005178EE /* EasyTipView.framework */,
 				7F8004471EF405470051D909 /* StepProgressBar.framework */,
@@ -387,6 +440,9 @@
 						DevelopmentTeam = HWR8QRZ7PF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
@@ -432,11 +488,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2C04B91EEEEE8E00F4E5B7 /* subiecte.csv in Resources */,
+				7FBC84341F02F60800870229 /* RatingViewController.xib in Resources */,
+				7FDAD4EC1EFBF2D800FD66B9 /* ExamType1Slider.xib in Resources */,
 				7FAA5B8E1EE8D2950085D453 /* MapSlide.xib in Resources */,
+				7F868BDB1EFAC0AB00E1ED45 /* obiective.csv in Resources */,
 				7FA5B90B1EE5B8B600BC1E33 /* LaunchScreen.storyboard in Resources */,
 				7F80043F1EF17C9F0051D909 /* MapSlide2.xib in Resources */,
 				7FA5B9341EE5D74E00BC1E33 /* GoogleService-Info.plist in Resources */,
 				7F2C04C11EEEF80E00F4E5B7 /* LearnSlider.xib in Resources */,
+				7F8A80021EFB476D008F86F9 /* exams.csv in Resources */,
 				7FA5B9081EE5B8B600BC1E33 /* Assets.xcassets in Resources */,
 				7F1E98741EE77102003BEDA8 /* Main.storyboard in Resources */,
 			);
@@ -512,7 +572,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB50D1C1EEDDCFA00E33E7D /* Lesson.swift in Sources */,
+				7FDAD4E71EFBD3C000FD66B9 /* ExamType1VC.swift in Sources */,
 				7FEAE4F11EF71A0E00B98F56 /* Topic.swift in Sources */,
+				7FDAD4EA1EFBF2C900FD66B9 /* ExamType1Slider.swift in Sources */,
 				7FEAE4EF1EF6C9E400B98F56 /* Objective.swift in Sources */,
 				7F2C04C31EEEF82700F4E5B7 /* LearnSlider.swift in Sources */,
 				7FAA5B901EE8D2C40085D453 /* MapSlide.swift in Sources */,
@@ -521,13 +583,20 @@
 				7FAA5B851EE8A9F00085D453 /* TabBarController.swift in Sources */,
 				7FEAE4F31EF71A1600B98F56 /* Exam.swift in Sources */,
 				7F8004431EF17CBF0051D909 /* MapSlide2.swift in Sources */,
+				7FBC84331F02F60800870229 /* RatingViewController.swift in Sources */,
+				7F1D15FE1F1EBA2D005A7611 /* ResetPassVC.swift in Sources */,
 				7FEAE4F51EF730DD00B98F56 /* PinButton.swift in Sources */,
 				7F2C04B71EEED02900F4E5B7 /* TopicSelectCell.swift in Sources */,
+				7F3E76431EF88BF400534DC4 /* ObjectivesVC.swift in Sources */,
 				7F1E986F1EE75F72003BEDA8 /* ExamsVC.swift in Sources */,
 				7FCD1FA11EEF57A9004530E3 /* TextViewStyle.swift in Sources */,
+				7F8A80001EFB4283008F86F9 /* ExamsViewCell.swift in Sources */,
+				7FBC842C1F02D18000870229 /* SettingsVC.swift in Sources */,
+				7FBC84321F02F60800870229 /* CosmosDistrib.swift in Sources */,
 				7FAA5B8C1EE8C6E50085D453 /* ButtonWithRadius.swift in Sources */,
 				7F1E98711EE75F7D003BEDA8 /* ProfileVC.swift in Sources */,
 				7F2C04BB1EEEEEAF00F4E5B7 /* csv.swift in Sources */,
+				7F868BD91EFAA28700E1ED45 /* ObjectivesViewCell.swift in Sources */,
 				7F1E986B1EE75F52003BEDA8 /* MapVC.swift in Sources */,
 				7F1E986D1EE75F66003BEDA8 /* TopicsVC.swift in Sources */,
 				7FAA5B881EE8BA6F0085D453 /* WelcomeVC.swift in Sources */,
@@ -692,6 +761,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ListenLearnSpeak/ListenLearnSpeak.entitlements;
 				DEVELOPMENT_TEAM = HWR8QRZ7PF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PopupDialog",
+				);
 				INFOPLIST_FILE = ListenLearnSpeak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = disable;
@@ -709,6 +783,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ListenLearnSpeak/ListenLearnSpeak.entitlements;
 				DEVELOPMENT_TEAM = HWR8QRZ7PF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PopupDialog",
+				);
 				INFOPLIST_FILE = ListenLearnSpeak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ionutdemeterca.ListenLearnSpeak;

@@ -13,14 +13,25 @@ class Objective {
     
     var ref: DatabaseReference!
     
-    private var _objNr: String!
+    private var _objNr: Int!
     private var _objName: String!
     private var _objPoints: Int!
-    private var _objAchieved: Int!
+    private var _objAchieved: Int = 0
+    private var _objData: Dictionary<String, Any>!
+    private var _objKey: String!
     
-    var objNr: String {
+    var objAchieved: Int {
+        get {
+            return _objAchieved
+        }
+        set {
+            _objAchieved = newValue
+        }
+    }
+    
+    var objNr: Int {
         if _objNr == nil {
-            _objNr = ""
+            _objNr = 0
         }
         return _objNr
     }
@@ -39,17 +50,28 @@ class Objective {
         return _objPoints
     }
     
-    init(objNr: String) {
+    var objData: Dictionary<String, Any> {
+        return _objData
+    }
+    
+    var objKey: String {
+        if _objKey == nil {
+            _objKey = ""
+        }
+        return _objKey
+    }
+    
+    init(objNr: Int) {
         self._objNr = objNr
     }
     
-    func getObj(completed: @escaping DownloadComplete) {
+    func getObj(tip: String, completed: @escaping DownloadComplete) {
         
         ref = Database.database().reference()
         
-        ref.child("Obiective").child(objNr).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("Obiective").child("\(tip)\(objNr)").observeSingleEvent(of: .value, with: { (snapshot) in
             
-            // Preia date utilizator
+            // Preia date obiective
             if let objData = snapshot.value as? Dictionary<String, Any> {
                 
                 if let objName = objData["nume"] as? String {
@@ -70,5 +92,14 @@ class Objective {
         }
 
     }
+    
+    func getObjData(objK: String, objN: String) {
+        
+        self._objKey = objK
+        self._objName = objN
+        
+    }
+    
+    
     
 }

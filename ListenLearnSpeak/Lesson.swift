@@ -15,7 +15,7 @@ class Lesson {
     private var _lectieId: Int!
     private var _continut = [Dictionary<String, Any>]()
     private var _nrDeLectii: Int!
-    private var _titluriLectii = [String]()
+    private var _infoText: String!
     
     var titlu: String {
         return _titlu
@@ -36,11 +36,11 @@ class Lesson {
         return _nrDeLectii
     }
     
-    var titluriLectii: [String] {
-        if _titluriLectii == nil {
-            _titluriLectii = []
+    var infoText: String {
+        if _infoText == nil {
+            _infoText = ""
         }
-        return _titluriLectii
+        return _infoText
     }
 
     init(lectieId: Int) {
@@ -60,8 +60,13 @@ class Lesson {
                     self._titlu = titlu
                 }
                 
-                if let continut = dict["continut"] as? [Dictionary<String, String>] {
+                if let continut = dict["continut"] as? [Dictionary<String, Any>] {
                     self._continut = continut
+                    
+                    if let infoText = continut[0]["info"] as? String {
+                        self._infoText = infoText
+                    }
+                    
                 }
                 
             }

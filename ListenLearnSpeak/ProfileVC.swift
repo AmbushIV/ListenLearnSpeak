@@ -147,12 +147,32 @@ class ProfileVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         totalLessonsProgressValue = 0
         totalTopicsProgressValue = 0
         totalExamsProgressValue = 0
         totalPointsProgressValue = 0
         lessonsProgress.animateTo(progress: totalLessonsProgressValue)
+        topicsProgress.animateTo(progress: totalTopicsProgressValue)
+        examsProgress.animateTo(progress: totalExamsProgressValue)
+        pointsProgress.animateTo(progress: totalPointsProgressValue)
         
     }
+    
+    @IBAction func objectivesBtnPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ObjectivesVC") as! ObjectivesVC
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func settingsBtnPressed(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
+        controller.nume = nameLbl.text!
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    
 
 }

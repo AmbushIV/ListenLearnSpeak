@@ -8,12 +8,10 @@ target 'ListenLearnSpeak' do
 	pod 'Firebase/Database'
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
-	pod 'SwiftyJSON'
 	pod 'Alamofire'
 	pod 'TagListView'
-	pod "DragDropiOS"
-	pod 'DragDropUI'
 	pod 'StepProgressBar'
-	pod 'UICircularProgressRing'
 	pod 'EasyTipView'
+	pod 'GTProgressBar'
+	pod 'PopupDialog'
 end

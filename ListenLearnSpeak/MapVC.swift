@@ -29,23 +29,17 @@ class MapVC: UIViewController, UIScrollViewDelegate {
         
         mapSliderSV.delegate = self
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        self.loadFeatures()
-        
         user.getData(stageName: "") { (done) in
             if done {
                 self.mapSliderSV.isHidden = false
                 self.gettingDataLoader.stopAnimating()
                 self.loadBg.isHidden = true
+                self.loadFeatures()
             } else {
                 self.mapSliderSV.isHidden = true
             }
             
         }
-        
     }
     
     func loadFeatures() {
@@ -80,10 +74,12 @@ class MapVC: UIViewController, UIScrollViewDelegate {
             
                 if self.user.totalLectii >= 4 {
                     featureView2.isUserInteractionEnabled = true
-                    featureView2.lockedStage.alpha = 0
+                    featureView2.lockedStage.isHidden = true
+                    featureView2.lockImage.isHidden = true
                 } else {
                     featureView2.isUserInteractionEnabled = false
                     featureView2.lockedStage.alpha = 0.5
+                    featureView2.lockImage.alpha = 0.6
                 }
             
         }

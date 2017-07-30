@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        return SDKApplicationDelegate.shared.application(app, open:url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation] as Any)
+        return SDKApplicationDelegate.shared.application(app, open: url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation] as Any)
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

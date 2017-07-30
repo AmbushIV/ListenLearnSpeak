@@ -1,4 +1,3 @@
-
 //
 //  LearnVC.swift
 //  ListenLearnSpeak
@@ -9,12 +8,10 @@
 
 import UIKit
 import AVFoundation
-import SwiftyJSON
-import Alamofire
 import StepProgressBar
 import EasyTipView
 
-class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelegate, EasyTipViewDelegate {
+class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelegate, EasyTipViewDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var learnSV: UIScrollView!
     @IBOutlet weak var pageControlMap: UIPageControl!
@@ -33,6 +30,9 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
     var titluLectie: String!
     var lessonNr: Int!
     var topicNr: Int!
+    var infoText: String!
+    var nrOfLessons: Int!
+    var nrOfTopics: Int!
     
     weak var tipView: EasyTipView?
 
@@ -47,6 +47,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         if lessonNr != nil {
             
             lesson = Lesson(lectieId: lessonNr)
+            lesson.getLessonsNr() { (bool) in self.nrOfLessons = self.lesson.nrDeLectii }
             
             lesson.getLesson() { (done) in
                 
@@ -62,6 +63,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
                     let textToSpeech = self.lesson.continut[0]["EN"] as! String
                     self.myUtterance = AVSpeechUtterance(string: textToSpeech)
                     self.myUtterance.rate = 0.1
+                    self.infoText = self.lesson.infoText
                     
                 } else {
                     print("Eroare: Lectie nepreluata")
@@ -72,6 +74,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         } else if topicNr != nil {
             
             topic = Topic(subiectId: topicNr)
+            topic.getTopicsNr() { (bool) in self.nrOfTopics = self.topic.nrDeSubiecte }
             
             topic.getTopic() { (done) in
                 
@@ -86,7 +89,6 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
                     self.pageControlMap.currentPage = 0
                     let textToSpeech = self.topic.continut[0]["EN"] as! String
                     self.myUtterance = AVSpeechUtterance(string: textToSpeech)
-                    self.myUtterance.rate = 0.1
                     
                 } else {
                     print("Eroare: Subiect nepreluat")
@@ -97,7 +99,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         } else {
             print("no")
         }
-
+    
     }
     
     @IBAction func tipInfoBtnPressed(_ sender: Any) {
@@ -105,23 +107,30 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         var preferences = EasyTipView.Preferences()
         
         preferences.drawing.backgroundColor = tipInfoBtn.backgroundColor!
-        
+
         preferences.animating.dismissTransform = CGAffineTransform(translationX: 0, y: -15)
         preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: -15)
         preferences.animating.showInitialAlpha = 0
         preferences.animating.showDuration = 1.5
         preferences.animating.dismissDuration = 1.5
-        preferences.drawing.arrowPosition = .top
+        preferences.drawing.arrowPosition = .bottom
         
         if let tipView = tipView {
             tipView.dismiss(withCompletion: {
                 // Info Dismiss
             })
         } else {
-            let text = "A - ai \n B - bee \n C - see \n D - dee"
-            let tip = EasyTipView(text: text, preferences: preferences, delegate: self)
-            tip.show(forView: tipInfoBtn)
-            tipView = tip
+            
+            let textInfo = infoText.replacingOccurrences(of: "\\n", with: "\n")
+            
+            if textInfo == "" {
+                print("No info")
+            } else {
+                let tip = EasyTipView(text: textInfo, preferences: preferences, delegate: self)
+                tip.show(forView: tipInfoBtn, withinSuperview: self.navigationController?.view)
+                tipView = tip
+            }
+            
         }
         
     }
@@ -140,10 +149,36 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
             if let featureView = Bundle.main.loadNibNamed("LearnSlider", owner: self, options: nil)?.first as? LearnSlider {
                 
                 featureView.roTextLbl.text = feature["RO"] as! String
-                featureView.textToListenLbl.text = feature["EN"] as! String
+                let textToListenLbl = featureView.textToListenLbl!
+                textToListenLbl.text = feature["EN"] as! String
+                let spacedText = textToListenLbl.text?.replacingOccurrences(of: "\\n", with: "\n")
+                textToListenLbl.text = spacedText
                 
                 learnSV.addSubview(featureView)
                 featureView.frame = CGRect(x: scrollViewWidth * CGFloat(index), y: 0, width: scrollViewWidth, height: scrollViewHeight)
+                
+                let textToAttribute = textToListenLbl.text!
+                let textToAttributeArray = textToAttribute.components(separatedBy: " ")
+                let attributedText = NSMutableAttributedString()
+                
+                for word in textToAttributeArray{
+                    
+                    let attributePending = NSMutableAttributedString(string: word + " ")
+                    let myRange = NSRange(location: 0, length: word.characters.count)
+                    let myCustomAttribute = [ "Tapped Word:": word]
+                    attributePending.addAttributes(myCustomAttribute, range: myRange)
+                    attributedText.append(attributePending)
+                    
+                }
+                
+                textToListenLbl.attributedText = attributedText
+                textToListenLbl.font = UIFont(name: "Helvetica", size: 20)
+                textToListenLbl.textAlignment = .center
+                textToListenLbl.textColor = UIColor.white
+                
+                let tap = UITapGestureRecognizer(target: self, action: #selector(HandleTaps))
+                tap.delegate = self
+                textToListenLbl.addGestureRecognizer(tap)
                 
             }
             
@@ -153,24 +188,28 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let pageIndex = Int(round(self.learnSV.contentOffset.x/view.frame.width))
+        let pageIndex = Int(round(self.learnSV.contentOffset.x/learnSV.frame.width))
         
         pageControlMap.currentPage = pageIndex
         
-        progressView.progress = pageControlMap.currentPage + 1
+        progressView.progress = pageIndex + 1
         
         var textToSpeech: String!
+        var newTextToSpeech: String!
         
         if lessonNr != nil {
             textToSpeech = self.lesson.continut[pageControlMap.currentPage]["EN"] as! String
+            newTextToSpeech = textToSpeech.replacingOccurrences(of: "\\n", with: "-")
+            infoText = self.lesson.continut[pageControlMap.currentPage]["info"] as! String
         } else if topicNr != nil {
             textToSpeech = self.topic.continut[pageControlMap.currentPage]["EN"] as! String
+            newTextToSpeech = textToSpeech.replacingOccurrences(of: "\\n", with: "-")
         } else {
             print("nimic")
         }
         
-        self.myUtterance = AVSpeechUtterance(string: textToSpeech)
-        self.myUtterance.rate = 0.1
+        myUtterance = AVSpeechUtterance(string: newTextToSpeech)
+        myUtterance.rate = 0.1
         
     }
     
@@ -186,7 +225,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
     
     @IBAction func listenBtnPressed(_ sender: Any) {
         
-        let pageIndex = Int(round(self.learnSV.contentOffset.x/view.frame.width))
+        let pageIndex = Int(round(self.learnSV.contentOffset.x/learnSV.frame.width))
         
         synth.speak(myUtterance)
         nextBtn.isUserInteractionEnabled = true
@@ -200,21 +239,29 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        let pageIndex = Int(round(self.learnSV.contentOffset.x/view.frame.width))
+        let pageIndex = Int(round(self.learnSV.contentOffset.x/learnSV.frame.width))
         pageControlMap.currentPage = pageIndex
         
         if pageControlMap.currentPage + 1 == pageControlMap.numberOfPages {
             
             // Stagiu terminat, acorda obiectiv + punctaj
             if lessonNr != nil {
-                self.finishStage(stageID: lessonNr)
+                self.finishStage(stageID: lessonNr, nrOfStages: nrOfLessons)
             } else if topicNr != nil {
-                self.finishStage(stageID: topicNr)
+                self.finishStage(stageID: topicNr, nrOfStages: nrOfTopics)
             } else {
-                print("nimic")
+                print("Nimic acordat")
             }
         
         } else {
+            
+            if let tipView = tipView {
+                tipView.dismiss(withCompletion: {
+                    // Info Dismiss
+                })
+            } else {
+                // Nimic
+            }
             
             scrollToPage(pageControlMap.currentPage+1)
             listenBtn.setTitle("ASCULTA", for: .normal)
@@ -225,15 +272,17 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         
     }
     
-    private func finishStage(stageID: Int) {
+    private func finishStage(stageID: Int, nrOfStages: Int) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "StageFinishedVC") as! StageFinishedVC
         
         if lessonNr != nil {
             controller.lessonNr = stageID
+            controller.nrOfStages = nrOfStages
         } else if topicNr != nil {
             controller.topicNr = stageID
+            controller.nrOfStages = nrOfStages
         } else {
             print("nimic")
         }
@@ -254,6 +303,9 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             self.present(controller, animated: true, completion: nil)
+            self.tipView?.dismiss(withCompletion: {
+                // Info Dismiss
+            })
             
         }
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
@@ -263,6 +315,31 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         actionSheetController.addAction(cancelAction)
         self.present(actionSheetController, animated: true, completion: nil)
         
+    }
+    
+    func HandleTaps(sender: UITapGestureRecognizer) {
+        
+        let myTextView = sender.view as! UITextView
+        let layoutManager = myTextView.layoutManager
+        
+        var location = sender.location(in: myTextView)
+        location.x -= myTextView.textContainerInset.left;
+        location.y -= myTextView.textContainerInset.top;
+        
+        let characterIndex = layoutManager.characterIndex(for: location, in: myTextView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        
+        if characterIndex < myTextView.textStorage.length {
+            
+            let attributeName = "Tapped Word:"
+            let attributeValue = myTextView.attributedText.attribute(attributeName, at: characterIndex, effectiveRange: nil) as? String
+            if let value = attributeValue {
+                print("You tapped on: \(value)")
+                myUtterance = AVSpeechUtterance(string: value)
+                myUtterance.rate = 0.1
+                synth.speak(myUtterance)
+            }
+            
+        }
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

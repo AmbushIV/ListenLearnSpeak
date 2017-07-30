@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import FacebookLogin
 import FacebookCore
+import PopupDialog
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
@@ -26,17 +27,49 @@ class LoginVC: UIViewController {
         if AccessToken.current?.authenticationToken != nil {
             self.goToMap()
         } else {
-            print("nelogat prin fb")
+            
         }
+        
+        emailField.delegate = self
+        passField.delegate = self
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
         
     }
     
-    @IBAction func loginBtnPressed(_ sender: UIButton) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.returnKeyType == UIReturnKeyType.next
+        {
+            if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+                
+                nextField.becomeFirstResponder()
+                
+            } else {
+                
+                textField.resignFirstResponder()
+                
+                return true
+                
+            }
+        }
+        
+        if textField.returnKeyType == UIReturnKeyType.go
+        {
+            self.loginBtnPressed(nil)
+        }
+        
+        return false
+        
+    }
+    
+    @IBAction func loginBtnPressed(_ sender: UIButton?) {
         
         Auth.auth().signIn(withEmail: emailField.text!, password: passField.text!) { (user, error) in
             if error == nil {
                 self.goToMap()
-                print("SIGNED IN")
             } else {
                 print(error!)
             }
@@ -61,7 +94,7 @@ class LoginVC: UIViewController {
                     
                     if error == nil {
                         
-                        self.ref.child("users").child((user?.uid)!).setValue(["nume": user?.displayName as Any, "email": user?.email as Any, "totalPuncte": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0, "totalSubiecte": 0, "obiective" : ["lectia1": 0, "lectia2" : 0]])
+                        self.ref.child("users").child((user?.uid)!).setValue(["nume": user?.displayName as Any, "email": user?.email as Any, "totalPuncte": 0, "totalLectii": 0, "totalExamene": 0, "totalObiectiveComplete": 0, "totalSubiecte": 0, "obiective" : ["lectia1": 0, "lectia2" : 0, "lectia3": 0, "lectia4": 0, "lectia5": 0, "lectia6": 0, "examen1": 0, "examen2": 0, "subiect1": 0, "subiect2": 0 , "subiect3": 0, "subiect4": 0, "subiect5": 0, "subiect6": 0]])
                         self.goToMap()
                         
                     } else {
@@ -78,6 +111,10 @@ class LoginVC: UIViewController {
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
             self.present(viewController, animated: true, completion: nil)
         })
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }
