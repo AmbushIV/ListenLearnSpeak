@@ -113,8 +113,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         })
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
+        //test
     }
     
 }

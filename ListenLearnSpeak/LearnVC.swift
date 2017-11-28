@@ -317,7 +317,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         
     }
     
-    func HandleTaps(sender: UITapGestureRecognizer) {
+    @objc func HandleTaps(sender: UITapGestureRecognizer) {
         
         let myTextView = sender.view as! UITextView
         let layoutManager = myTextView.layoutManager
@@ -331,7 +331,7 @@ class LearnVC: UIViewController, UIScrollViewDelegate, AVSpeechSynthesizerDelega
         if characterIndex < myTextView.textStorage.length {
             
             let attributeName = "Tapped Word:"
-            let attributeValue = myTextView.attributedText.attribute(attributeName, at: characterIndex, effectiveRange: nil) as? String
+            let attributeValue = myTextView.attributedText.attribute(NSAttributedStringKey(rawValue: attributeName), at: characterIndex, effectiveRange: nil) as? String
             if let value = attributeValue {
                 print("You tapped on: \(value)")
                 myUtterance = AVSpeechUtterance(string: value)

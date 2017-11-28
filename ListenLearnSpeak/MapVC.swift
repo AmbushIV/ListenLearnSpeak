@@ -86,7 +86,7 @@ class MapVC: UIViewController, UIScrollViewDelegate {
         
     }
     
-    public func goToLessonAction(_sender: UIButton) {
+    @objc public func goToLessonAction(_sender: UIButton) {
         let lessonNrInt = Int(_sender.title(for: .normal)!)!
         self.goToLesson(lectieId: lessonNrInt)
     }
